@@ -1,6 +1,12 @@
-
 import Image from 'next/image'
+import Link from 'next/link'
 import heroImage from '../../public/Img/TadeRemoved.png'
+import profileImage from '../../public/Img/Tade.png'
+
+import linkedin from '../../public/Img/Linkedin.svg'
+import googleSchoolar from '../../public/Img/googleScholara.svg'
+import researchGate from '../../public/Img/ResearchGate.svg'
+import orcid from '../../public/Img/orcid.svg'
 const Hero = () => {
   return (
 <main className="bg-[#000000] h-[650px] w-full mt-16 "  >
@@ -13,7 +19,7 @@ const Hero = () => {
         <h1 className='text-[#2Ecc71]'>G.Wakjira, PHD</h1>
       </div>
     
-    <p className=' text-sm font-light mt-10  text-gray-300 '>
+    <p className=' text-xl font-light mt-10  text-gray-300 '>
     I'm a dedicated scholar and researcher. 
     My work has been recognized on numerous occasions. 
     Some of the recognitions include the Emir (Prince) Gold Medal
@@ -34,16 +40,26 @@ const Hero = () => {
        <div id='triangle-right'  >
           <p className='text-sm text-gray-100 -ml-16'>30+</p> 
        </div>
-       <p className='text-sm ml-3'>Publications  and Presentations</p>
+       <p className='text-sm  ml-3'>Publications  and Presentations</p>
       </div>
     </div>
 
-    <button className='text-[#FFFFFF] flex bg-[#1C3B8B] text-sm py-3 px-6 rounded-xl my-10'>
+    <button className='text-[#FFFFFF] flex bg-[#2ecc71] text-sm py-3 px-6 rounded-xl my-10'>
       Learn More 
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     </button>
+
+{/* Social media Icons */}
+<div>
+<div className=' w-2/5 flex items-center justify-between gap-y-4'>
+    <Link href=""><a className='flex items-center hover-state'> <Image className="rounded-full spaces-x-4 transform hover:scale-110 transition ease-out duration-400" src={linkedin} width={33} height={33} alt="Linkedin"/> </a></Link>
+    <Link href=""><a className='flex items-center hover-state'> <Image className="rounded-full transform hover:scale-110 transition ease-out duration-400" src={linkedin} width={33} height={33} alt="Linkedin"/></a></Link>
+    <Link href=""><a className='flex items-center hover-state'><Image className='rounded-full transform hover:scale-110 transition ease-out duration-400' src={googleSchoolar} width={33} height={33} alt="Linkedin"/></a></Link>
+  
+   </div>
+</div>
 
     </div>
   </div> 

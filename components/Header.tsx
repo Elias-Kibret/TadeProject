@@ -23,7 +23,7 @@ const Header = () => {
 
     
       <div className="flex justify-between">
-        <nav className="flex list-none items-center space-x-12  md:inline-flex text-sm text-[#A9A9A9]">
+        <nav className="flex list-none items-center space-x-12   md:inline-flex text-sm text-[#A9A9A9]">
             <li className="">
                 <Link href="/">
                     <a className="hover-state flex items-center space-x-2"><svg  xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

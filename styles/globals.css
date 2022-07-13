@@ -11,7 +11,7 @@ html{
      font-family: 'poppins';
 }
 body{
-    background-color:#170006;
+    background-color:#000301;
     height: 5000px;
    
 }
@@ -63,6 +63,7 @@ color: #f4fffdff;
     border-left: 50px solid #201616;
     border-bottom: 25px solid transparent;
     
+    
 }  
 .hero-image{
     background-image: url('../public/Img/TadeRemoved.png');
@@ -72,7 +73,7 @@ color: #f4fffdff;
     height: 500px;
     width:50%;
     background-position: top;
-    filter: drop-shadow(-14rem -14rem 10rem rgb(248, 248, 248));
+    filter: drop-shadow(-10rem -10rem 17rem rgb(248, 248, 248));
     
     
 

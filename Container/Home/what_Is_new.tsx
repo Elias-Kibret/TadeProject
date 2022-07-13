@@ -8,7 +8,7 @@ const what_Is_new = () => {
     <div className="p-20">
         <h2 className="text-[#A9A9A9] text-xl font-bold"><span className=" text-[#A9A9A9] ">__</span> News</h2>
         <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-extrabold">What's New</h2>
-        <div className="my-32 flex justify-between bg-[#201616] py-12 px-10  rounded-xl ">
+        <div className="my-32 flex justify-between bg-[#141B17] py-12 px-10  rounded-xl ">
              <div className='w-[50%] flex flex-col justify-center'>
                 <h3 className='bg-[A9A9A9] mb-10 text-[#2ECC71] text-xl'>May 2022</h3>
                 <p className="text-gray-100 ">Awarded a Gold Medal by the Deputy Emir (Prince) of 
@@ -22,7 +22,7 @@ const what_Is_new = () => {
              </div>
         </div>
         <div className='mt-24 grid grid-cols-3 gap-x-16'>
-            <div className=' bg-[#201616] overflow-hidden rounded-xl'>
+            <div className=' bg-[#141B17] overflow-hidden rounded-xl'>
               <Image src={award1} className=" object-cover overflow-hidden" />
               <div className='mx-4'>
               <span className='block my-4 text-[#2ECC71]'>May 2022</span>
@@ -34,7 +34,7 @@ const what_Is_new = () => {
               
 
             </div>
-            <div className='rounded-xl  bg-[#201616] overflow-hidden  '>
+            <div className='rounded-xl  bg-[#141B17] overflow-hidden  '>
                 <Image src={award3}   />
                 <div className='mx-4'>
                 <span className='block my-4 text-[#2ECC71]'>May 2022</span>
@@ -44,7 +44,7 @@ const what_Is_new = () => {
                 </p>
               </div>
             </div>
-            <div className='rounded-xl  bg-[#201616] overflow-hidden '>
+            <div className='rounded-xl  bg-[#141B17] overflow-hidden '>
             <Image src={award4}   />
             <div className='mx-4'>
             <span className='block my-4 text-[#2ECC71]'>May 2022</span>

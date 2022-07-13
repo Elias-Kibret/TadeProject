@@ -9,7 +9,7 @@ const persentaions = () => {
                 <div className="flex mt-8  items-center justify-between">
                    <div><h3 className="text-[#FFFFFF] text-3xl  ">Publications and presentations</h3></div>
                    <div className="flex items-center justify-between text-[#FFFFFF] mr-14">
-                    <button className="bg-[#1C3B8B] px-4 py-2   rounded-lg">All</button>
+                    <button className="bg-[#2ecc71] px-4 py-2   rounded-lg">All</button>
                     <Link href="">
                         <a className="flex items-center mx-6">
                         Publications
@@ -29,13 +29,13 @@ const persentaions = () => {
                </div>
 
                <div className="my-14 grid grid-cols-2 gap-x-16">
-               <div className="flex bg-[#201616] py-10 px-8 rounded-lg">
+               <div className="flex bg-[#141B17] py-10 px-8 rounded-lg">
                      <div className="  pr-12">
-                      <p className="text-[#FFFFFF] font-semibold my-4"> Repair and Retrofit of RC Bridge Piers 
+                      <p className="text-[#FFFFFF]  my-4"> Repair and Retrofit of RC Bridge Piers 
                         with Steel-Reinforced Grout Jackets: An 
                         Experimental Investigation.
                         </p>
-                        <p className="text-[#FF003D] font-semibold">
+                        <p className="text-[#2ecc71] ">
                           Kennedy-Kuiper R., Wakjira T., Alam MS.
                         </p>
                         <p className="mt-2 text-[#FFFFFF]"><i>Journal of Bridge Engineering (ASCE) 27 (8)</i></p>
@@ -46,13 +46,13 @@ const persentaions = () => {
                    </div>
                    
 
-                   <div className="flex bg-[#201616] py-10 px-8 rounded-lg">
+                   <div className="flex bg-[#141B17] py-10 px-8 rounded-lg">
                    <div className="  pr-12">
-                    <p className="text-[#FFFFFF] font-semibold my-4"> Repair and Retrofit of RC Bridge Piers 
+                    <p className="text-[#FFFFFF] my-4"> Repair and Retrofit of RC Bridge Piers 
                       with Steel-Reinforced Grout Jackets: An 
                       Experimental Investigation.
                       </p>
-                      <p className="text-[#FF003D] font-semibold">
+                      <p className="text-[#2ecc71] ">
                         Kennedy-Kuiper R., Wakjira T., Alam MS.
                       </p>
                       <p className="mt-2 text-[#FFFFFF]"><i>Journal of Bridge Engineering (ASCE) 27 (8)</i></p>
