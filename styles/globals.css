@@ -98,4 +98,14 @@ color: #f4fffdff;
     background-repeat: none;
     background-size: cover;
     background-position: bottom;
+    
+}
+.awards_hero{
+    width:450px;
+    height:550px;
+    background-image: url('../public/Img/HeroImages/awardHero.png');
+    background-repeat: none;
+    background-size:  cover;
+    background-position: center;
+    background-color: rgba(0,0,0,0.4);
 }
