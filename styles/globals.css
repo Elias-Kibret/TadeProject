@@ -71,23 +71,14 @@ color: #f4fffdff;
     background-size: cover;
     overflow: hidden;
     height: 500px;
-    width:50%;
-    background-position: top;
-    filter: drop-shadow(-10rem -10rem 17rem rgb(248, 248, 248));
+    width:45%;
+    background-position:bottom;
+    filter: drop-shadow(-10rem -10rem 17rem rgb(237, 237, 237));
     
     
 
 }
-.hero-absolute{
-    width:100%;
-    /* height: 100%; */
-    /* top:90%; */
-    /* right: 0; */
-    /* filter: drop-shadow(-10rem -10rem -10rem rgb(4, 3, 3)) ; */
-    /* z-index: 1; */
 
-    
-} 
 .title{
     font-weight: bolder;
 }

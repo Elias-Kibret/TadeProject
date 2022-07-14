@@ -1,9 +1,11 @@
 import React from 'react'
 import Hero from './Hero'
+import List from './List'
 const Index = () => {
   return (
     <div>
-    <Hero/>    
+    <Hero/>
+    <List/>    
     </div>
   )
 }
