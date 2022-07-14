@@ -62,7 +62,7 @@ const Header = () => {
                 </Link>
             </li>
 
-              <li className="bg-[#2ECC71] text-[#FFFFFF] hover-state  border-black  px-7 py-2  rounded-full hover:bg-[black]  hover:text-[#2ECC71] hover: border hover:border-[#2ECC71]">
+              <li className="bg-[#2ECC71] text-[#FFFFFF] hover-state  border-black  px-7 py-2  rounded-full hover:bg-[black]  hover:text-[#2ECC71] hover: border hover:border-[#2ECC71] ">
               <Link href=""  >
                     <a className="flex items-center"> Contact</a>
                 </Link>

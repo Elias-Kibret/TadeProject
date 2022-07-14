@@ -25,13 +25,14 @@ const Hero = () => {
     Some of the recognitions include the Emir (Prince) Gold Medal
 
     </p>
-    <div className='text-gray-100 my-10 flex items-end justify-between ' >
-    <button className='text-[#FFFFFF] flex bg-[#2ecc71] text-sm py-3 px-6 rounded-xl my-10'>
+    <div className='text-gray-100 my-10 flex items-start   my-16 ' >
+    <button className='text-[#FFFFFF] flex bg-[#2ecc71] text-sm py-3 px-6 rounded-xl '>
         Learn More 
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       </button>
+         <div className='flex ml-24 justify-between'>
 
       <div className=' flex flex-col   mx-10'>
         
@@ -39,16 +40,18 @@ const Hero = () => {
           <p className='text-sm -ml-16'>14+</p>
        </div>
        <div>
-       <p className='text-sm text mt-3'>Awards  </p>
+       <p className='text-sm text mt-3'>Awards <br/>   </p>
        </div>
       </div>
-      <div className=''>
+      <div className='mx-10'>
 
        <div id='triangle-right'  >
           <p className='text-sm text-gray-100 -ml-16'>30+</p> 
        </div>
-       <p className='text-sm  mt-3'>Publications  and Presentations</p>
+       <p className='text-sm  mt-3'>Publications  and<br/>
+        Presentations</p>
       </div>
+         </div>
     </div>
 
 

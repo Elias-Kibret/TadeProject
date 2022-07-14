@@ -70,10 +70,10 @@ color: #f4fffdff;
     background-repeat: none;
     background-size: cover;
     overflow: hidden;
-    height: 500px;
-    width:45%;
-    background-position:bottom;
-    filter: drop-shadow(-10rem -10rem 17rem rgb(237, 237, 237));
+    height: 600px;
+    width:40%;
+    background-position:bottom ;
+    /* filter: drop-shadow(-10rem -10rem 17rem rgb(237, 237, 237)); */
     
     
 
