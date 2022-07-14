@@ -101,8 +101,10 @@ color: #f4fffdff;
     
 }
 .awards_hero{
-    width:450px;
-    height:550px;
+    padding: 0px 200px !important;
+    width:400px;
+    height:500px;
+    margin: 0px 100px 0px 150px;
     background-image: url('../public/Img/HeroImages/awardHero.png');
     background-repeat: none;
     background-size:  cover;
