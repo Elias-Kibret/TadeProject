@@ -9,7 +9,7 @@ const Layout = ({children}:Props) => {
     <div className="relative  overflow-hidden">
         <Header />
         {children}
-        <Footer/>
+        {/* <Footer/> */}
     </div>
   )
 }

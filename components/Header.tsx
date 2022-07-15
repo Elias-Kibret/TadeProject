@@ -10,16 +10,17 @@ const Header = () => {
   const [show, setShow]=React.useState<boolean>(false);
   console.log(show)
   return (
-<header className=" fixed bg-black w-full top-0 left-0  right-0 z-10 text-xl px-4 sm:px-10 py-5 text-gray- font-poppins ">
-   <div className="flex  lg:justify-center xl:justify-between xl:pl-14  items-center">
-      <div className="flex items-center space-x-4">
+<header className=" fixed w-full top-0 left-0  right-0 z-10 text-xl px-4 sm:px-10 py-5 text-gray- font-poppins ">
+   <div className="flex  justify-between  xl:pl-14  items-center">
+      <div className="flex justify-between items-centee  space-x-4 w-full lg:w-auto sm:px-0 md:hidden lg:block">
   
-    <span className="text-gray-200 hidden xl:block "><span className=" font-bold ">Tadesse </span>G. Wakjira</span>
+    <span className="text-gray-200  "><span className=" font-bold ">Tadesse </span>G. Wakjira</span>
+    <div className='text-[#2Ecc71] md:hidden'>
+         <HiMenu size={45}/>
+        </div>
       </div>
-      <div className='sm:hidden'>
-       <HiMenu/>
-      </div>
-      <div className="hidden sm:block">
+
+      <div className="hidden md:block">
 
     
       <div className="flex justify-between">
@@ -62,10 +63,8 @@ const Header = () => {
                 </Link>
             </li>
 
-              <li className="bg-[#2ECC71] text-[#FFFFFF] hover-state  border-black  px-7 py-2  rounded-full hover:bg-[black]  hover:text-[#2ECC71] hover: border hover:border-[#2ECC71] ">
-              <Link href=""  >
-                    <a className="flex items-center"> Contact</a>
-                </Link>
+              <li>
+
               </li>
   
           
@@ -73,6 +72,11 @@ const Header = () => {
   
       </div>
 
+        </div>
+        <div  className="bg-[#2ECC71] text-[#FFFFFF] hidden md:block hover-state text-sm border-black  px-7 py-2  rounded-full hover:bg-[black]  hover:text-[#2ECC71] hover: border hover:border-[#2ECC71] ">
+        <Link href=""  >
+              <a className="flex items-center"> Contact</a>
+          </Link>
         </div>
     </div> 
 </header>
