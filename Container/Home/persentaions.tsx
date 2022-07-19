@@ -28,8 +28,38 @@ const persentaions = () => {
                 
                </div>
 
-               <div className="my-14 grid grid-cols-2 gap-x-16">
+               <div className="my-14 grid grid-cols-2 gap-16">
                <div className="flex bg-[#141B17] py-10 px-8 rounded-lg">
+                     <div className="  pr-12">
+                      <p className="text-[#FFFFFF]  my-4"> Repair and Retrofit of RC Bridge Piers 
+                        with Steel-Reinforced Grout Jackets: An 
+                        Experimental Investigation.
+                        </p>
+                        <p className="text-[#2ecc71] ">
+                          Kennedy-Kuiper R., Wakjira T., Alam MS.
+                        </p>
+                        <p className="mt-2 text-[#FFFFFF]"><i>Journal of Bridge Engineering (ASCE) 27 (8)</i></p>
+                     </div>
+                     <div className="h-full flex items-center">
+                      <Image src={Books} className="" height={470} width={350} />
+                     </div>
+                   </div>
+                   <div className="flex bg-[#141B17] py-10 px-8 rounded-lg">
+                     <div className="  pr-12">
+                      <p className="text-[#FFFFFF]  my-4"> Repair and Retrofit of RC Bridge Piers 
+                        with Steel-Reinforced Grout Jackets: An 
+                        Experimental Investigation.
+                        </p>
+                        <p className="text-[#2ecc71] ">
+                          Kennedy-Kuiper R., Wakjira T., Alam MS.
+                        </p>
+                        <p className="mt-2 text-[#FFFFFF]"><i>Journal of Bridge Engineering (ASCE) 27 (8)</i></p>
+                     </div>
+                     <div className="h-full flex items-center">
+                      <Image src={Books} className="" height={470} width={350} />
+                     </div>
+                   </div>
+                   <div className="flex bg-[#141B17] py-10 px-8 rounded-lg">
                      <div className="  pr-12">
                       <p className="text-[#FFFFFF]  my-4"> Repair and Retrofit of RC Bridge Piers 
                         with Steel-Reinforced Grout Jackets: An 
@@ -63,7 +93,7 @@ const persentaions = () => {
                  </div>
 
                </div>
-               <div className='flex justify-center items-center my-28 '>
+               <div className='flex justify-center items-center my-28 hover-state '>
       <button className='px-8 py-4 text-[#FFFFFF] bg-[#2ECC71] rounded-lg' >View All</button>
       </div>
     </div>
