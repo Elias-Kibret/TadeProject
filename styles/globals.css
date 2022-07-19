@@ -12,7 +12,7 @@ html{
 }
 body{
     background-color:#000301;
-    height: 5000px;
+
    
 }
 .hero{
@@ -70,9 +70,10 @@ color: #f4fffdff;
     background-repeat: none;
     background-size: cover;
     overflow: hidden;
-    height: 37rem;
-    width:45%;
-    background-position:bottom ;
+   
+
+    /* margin-top: -150px; */
+    /* background-position:top ; */
     /* filter: drop-shadow(-10rem -10rem 17rem rgb(237, 237, 237)); */
     
     
@@ -83,8 +84,8 @@ color: #f4fffdff;
     font-weight: bolder;
 }
 .hero__WhatsNew{
-    width:45%;
-    height:370px;
+    width:48%;
+    height:400px;
     background-image: url('../public/Img/HeroImages/whatsNewHero.png');
     background-repeat: none;
     background-size: cover;

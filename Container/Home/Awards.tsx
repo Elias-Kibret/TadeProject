@@ -67,7 +67,7 @@ const Awards = () => {
               </div>
             </div>
         </div>
-        <div className='flex justify-center items-center my-28  '>
+        <div className='flex justify-center items-center my-28 hover-state '>
         <button className='px-8 py-4 text-[#FFFFFF] bg-[#2ECC71] rounded-lg' >More News</button>
         </div>
     </div>

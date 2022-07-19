@@ -6,11 +6,11 @@ import Awards from "./Awards"
 const index = () => {
   return (
 <>
-    {/* <Hero/> */}
-    {/* <New/> */}
-    {/* <Persentation/> */}
-    {/* <Awards/> */}
-    {/* <Contact/> */}
+    <Hero/>
+    <New/>
+    <Persentation/>
+    <Awards/>
+    <Contact/>
 </>
   )
 }
