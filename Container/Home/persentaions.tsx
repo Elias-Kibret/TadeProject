@@ -1,11 +1,12 @@
 import Link from "next/link"
 import Image from "next/image"
 import Books from '../../public/Img/Books.jpg'
+import {FaMinus} from 'react-icons/fa'
 const persentaions = () => {
   return (
-    <div className="px-24">
+    <div className=" px-8 md:px-24">
                <div>
-                <h3 className="text-[#A9A9A9] flex items-center"><span className="font-[800]">__</span>Research</h3>
+                <h3 className="text-[#A9A9A9] flex items-center"><span className="font-[800]"><Faminus/></span>Research</h3>
                 <div className="flex mt-8  items-center justify-between">
                    <div><h3 className="text-[#FFFFFF] text-3xl  ">Publications and presentations</h3></div>
                    <div className="flex items-center justify-between text-[#FFFFFF] mr-14">
@@ -28,8 +29,8 @@ const persentaions = () => {
                 
                </div>
 
-               <div className="my-14 grid grid-cols-2 gap-16">
-               <div className="flex bg-[#141B17] py-10 px-8 rounded-lg">
+               <div className="my-14  grid  grid-cols-1  md:grid-cols-2 gap-x-16 gap-y-10">
+               <div className="flex bg-[#141B17] py-10 md:px-8 rounded-lg ">
                      <div className="  pr-12">
                       <p className="text-[#FFFFFF]  my-4"> Repair and Retrofit of RC Bridge Piers 
                         with Steel-Reinforced Grout Jackets: An 

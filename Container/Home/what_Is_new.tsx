@@ -41,7 +41,7 @@ const what_Is_new = () => {
 
 </div>
         </div>
-        <div className='mt-24 grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-10'>
+        <div className='mt-24 grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 place-items-center  gap-x-16 gap-y-10'>
             <div className=' bg-[#141B17] overflow-hidden rounded-xl'>
               <Image src={award1} className=" object-cover overflow-hidden" />
               <div className='mx-4'>

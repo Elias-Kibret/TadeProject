@@ -18,12 +18,12 @@ const settings = {
   }
 const Awards = () => {
   return (
-    <div className='px-24'>
+    <div className='px-14 md:px-24'>
         <div>
         <h2 className="text-[#A9A9A9] text-xl "><span className=" text-[#A9A9A9]   ">__</span>Awards</h2>
             <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold">Selected Awards and Recognitions</h2>    
         </div> 
-        <div className='mt-24 grid grid-cols-3 gap-x-16'>
+        <div className='mt-24 grid grid-cols-1  md:grid-cols-3 gap-10'>
             <div className=' bg-[#141B17] overflow-hidden rounded-xl'>
 
             <Slider {...settings}>
