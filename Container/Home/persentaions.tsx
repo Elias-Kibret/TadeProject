@@ -6,7 +6,7 @@ const persentaions = () => {
   return (
     <div className=" px-8 md:px-24">
                <div>
-                <h3 className="text-[#A9A9A9] flex items-center"><span className="font-[800]"><Faminus/></span>Research</h3>
+                <h3 className="text-[#A9A9A9] flex items-center"><span className="font-[800]"></span>Research</h3>
                 <div className="flex mt-8  items-center justify-between">
                    <div><h3 className="text-[#FFFFFF] text-3xl  ">Publications and presentations</h3></div>
                    <div className="flex items-center justify-between text-[#FFFFFF] mr-14">
