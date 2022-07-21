@@ -84,12 +84,13 @@ color: #f4fffdff;
     font-weight: bolder;
 }
 .hero__WhatsNew{
-    width:48%;
-    height:400px;
+    width:100%;
+    height:340px;
+    
     background-image: url('../public/Img/HeroImages/whatsNewHero.png');
     background-repeat: none;
     background-size: cover;
-    background-position: bottom;
+    background-position: top;
     
 }
 .awards_hero{
@@ -103,3 +104,25 @@ color: #f4fffdff;
     background-position: center;
     background-color: rgba(0,0,0,0.4);
 }
+.whatNew{
+    justify-content: center;
+    
+
+}
+
+@media (min-width: 640px) { 
+    .hero__WhatsNew{
+        width:48%;
+        height:340px;
+        margin-right: 50px;
+    
+    }
+    .whatNew{
+        justify-content: start;
+    }
+    .hero_whats_main{
+        margin-top: 4rem;
+    }
+
+
+ }
