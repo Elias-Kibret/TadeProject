@@ -8,7 +8,7 @@ import ColUI from '../WhatsNew/News/Cols'
 import Image from 'next/image'
 const List = () => {
   return (
-    <div className=" px-6 md:mt-20 md:px-20" >
+    <div className=" md:mt-20 md:px-20" >
      <RowUI/>
      <div className='mt-24 grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 place-items-center  gap-x-16 gap-y-10'>
        <ColUI/>

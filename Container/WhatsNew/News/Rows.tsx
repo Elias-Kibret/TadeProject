@@ -17,8 +17,8 @@ const Rows = () => {
         }
   return (
     <div >
-        <div className="lg:my-32  flex flex-wrap-reverse justify-between items-center bg-[#141B17] py-10 md:py-8 px-6 md:px-20 mx-auto  rounded-xl ">
-                     <div className='md:w-[50%] flex flex-col  justify-center'>
+        <div className="lg:my-32  grid grid-cols-2 gap-16 flex-wrap-reverse justify-between items-center bg-[#141B17] py-10 md:py-8 px-6 md:px-20 mx-auto  rounded-xl ">
+                     <div className=' flex flex-col  justify-center'>
                         <h3 className='bg-[A9A9A9] mb-10 text-[#2ECC71] text-xl'>May 2022</h3>
                         <p className="text-gray-100 text-justify  ">Awarded a Gold Medal by the Deputy Emir (Prince) of 
                            the State of Qatar HH Sheikh Abdullah bin Hamad Al 
@@ -26,7 +26,7 @@ const Rows = () => {
                            research achievements. FIRST PLACE distinguished 
                            graduate of class 2022.</p>
                      </div>
-                     <div className=' bg-[#141B17] overflow-hidden rounded-xl mb-8 md:mb-2  md:w-[35%]'>
+                     <div className=' bg-[#141B17] overflow-hidden rounded-xl mb-8 md:mb-2  '>
 
         <Slider {...settings} className="rounded-xl overflow-hidden ">
         <Image src={award3} className="object-contain overflow-hidden rounded-xl"  />

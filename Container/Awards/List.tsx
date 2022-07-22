@@ -19,7 +19,7 @@ const settings = {
   }
 const List = () => {
   return (
-    <div className='px-24'>
+    <div className='mx-24 w-4/5 mx-auto'>
     <div>
     <h2 className="text-[#A9A9A9] text-xl "><span className=" text-[#A9A9A9]   ">__</span>Awards</h2>
         <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold">Selected Awards and Recognitions</h2>    

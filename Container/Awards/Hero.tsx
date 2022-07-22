@@ -1,13 +1,6 @@
-import React from 'react'
 import Image from 'next/image'
-import hero_Image from '../../public/Img/HeroImages/awardHero.png'
 import Link from 'next/link'
-import heroImage from '../../public/Img/TadeRemoved.png'
-import profileImage from '../../public/Img/Tade.png'
-import linkedin from '../../public/Img/Linkedin.svg'
-import googleSchoolar from '../../public/Img/googleScholara.svg'
-import researchGate from '../../public/Img/ResearchGate.svg'
-import orcid from '../../public/Img/orcid.svg'
+import SocialMediaIcons from '../../components/Icons/SocialMediaIcons'
 const Hero = () => {
   return (
 <main className="bg-[#000000]  mt-16 "  >
@@ -18,18 +11,18 @@ const Hero = () => {
   </div>
 
   <div className='  '>
-    <div className='font-[Poppins] text-5xl  font-extrabold pt-20'>
-      <div className='inline-block title'>
-        <h1 className='text-[#FFFFFF] py-5 title
-         '>Selected Awards </h1> 
-        <h1 className='text-[#2Ecc71]'>and Recognitions</h1>
+  <div className='mx-8'>
+    <div className='mt-32 flex w-full'>
+        <h1 className='text-[#FFFFFF]  title text-6xl'>Selected Awards <br/> <span className='text-[#2Ecc71] '>and Recognitions</span> </h1> 
       </div>
+      <div className='hidden sm:flex' >
+      <SocialMediaIcons/>
+      </div>
+  
     </div>
     <div className='mt-10'>
     <div className=' w-2/5 grid grid-cols-3 '>
-        <Link href=""><a className='flex items-center hover-state'> <Image className="rounded-full spaces-x-4 transform hover:scale-110 transition ease-out duration-400" src={linkedin} width={33} height={33} alt="Linkedin"/> </a></Link>
-        <Link href=""><a className='flex items-center hover-state'> <Image className="rounded-full transform hover:scale-110 transition ease-out duration-400" src={linkedin} width={33} height={33} alt="Linkedin"/></a></Link>
-        <Link href=""><a className='flex items-center hover-state'><Image className='rounded-full transform hover:scale-110 transition ease-out duration-400' src={googleSchoolar} width={33} height={33} alt="Linkedin"/></a></Link>
+      
   
        </div>
     </div>

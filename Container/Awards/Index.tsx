@@ -4,8 +4,9 @@ import List from './List'
 import Navbar from '../Navbar/Navbar'
 const Index = () => {
   return (
-    <div>
- 
+    <div >
+      <Hero/>
+      <List/>
     </div>
   )
 }
