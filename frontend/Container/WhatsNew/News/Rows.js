@@ -21,7 +21,7 @@ const Rows = (props) => {
       setNew(data)
      })
   },[])
-  console.log(props.data[0])
+  
   return (
     <div >
           {
@@ -30,7 +30,7 @@ const Rows = (props) => {
               return(
                 <div key={index} className="lg:my-32 flex flex-row flex-wrap-reverse justify-between  bg-[#141B17] py-10 md:py-8 px-6 md:px-20 mx-auto  rounded-xl ">
                 <div className=' flex flex-col w-[50%] justify-center'>
-                   <h3 className='p text-[#2ECC71] mb-8 text-xl'>{news.date}</h3>
+                   <h3 className='p text-[#2ECC71] mb-8 text-xl'>{props.data[index].date}</h3>
                    <p className="text-gray-100 text-justify  ">{props.data[index].decription}</p>
                 </div>
                 <div className='w-[30%]'>

@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { urlFor } from '../../../client'
 const Cols = (props:any) => {
-  // console.log(props.data[0].imagesGallery.asset._ref)
+  
   return (
     <div className='mt-24 h-[600px]  grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 place-items-center over gap-x-16 gap-y-10'>
       
