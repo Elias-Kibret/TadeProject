@@ -1,8 +1,9 @@
+import {FaMinus} from 'react-icons/fa'
 const Contact = () => {
   return (
     <div className="px-6 mx-auto md:px-24 over">
         <div>
-        <h2 className="text-[#A9A9A9] text-xl "><span className=" text-[#A9A9A9]   ">__</span> Contact</h2>
+        <h2 className="text-[#A9A9A9] text-xl flex items-center font-bold"><span className=" text-[#A9A9A9] px-2 "><FaMinus /></span> Contact</h2>
             <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold">Contact Me</h2>    
         </div>
         <div className="flex flex-col sm:grid sm:grid-cols-2 gap-x-20 px:5 sm:px-14 mx-auto ">

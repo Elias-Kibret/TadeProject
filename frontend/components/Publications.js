@@ -13,7 +13,7 @@ const Publications = () => {
      })
   },[])
 const list=['Authors','Journal','Vol','Pages','Year','Cites as']
-  console.log(news)
+  
   return (
     <div className='w-[75%] mx-auto'>
 <div className='flex'>
@@ -41,12 +41,12 @@ const list=['Authors','Journal','Vol','Pages','Year','Cites as']
             
               
             return(
-              <>
+              <div key={List+item} >
               {
                 List.Authors.map((item,index)=>{
                   return(
                     
-                    <span >{index===0?<b className='mx-1'>{item}</b>:<i className='mx-1'>{item}</i>}</span>
+                    <span key={index+item} >{index===0?<b className='mx-1'>{item}</b>:<i className='mx-1'>{item}</i>}</span>
                     
                   )
                 })
@@ -56,7 +56,7 @@ const list=['Authors','Journal','Vol','Pages','Year','Cites as']
               <li><i>{List.Pages}</i></li>
               <li><i>{List.Year}</i></li>
               <li><i>{List.Citeas}</i></li>
-              </> 
+              </div> 
             )
           })
         }
