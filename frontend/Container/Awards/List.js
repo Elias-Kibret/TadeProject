@@ -13,21 +13,11 @@ const List = () => {
      })
   },[])
   return (
-    <div className='mx-24  mx-auto'>
-    <div>
-    <h2 className="text-[#A9A9A9] text-xl "><span className=" text-[#A9A9A9]   ">__</span>Awards</h2>
-        <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold">Selected Awards and Recognitions</h2>    
-    </div> 
+    <div className='mx-24 mt-32  mx-auto'>
   
   <Awards data={awards}/>
-  
-       
-       
-  
-    <div className='flex justify-center items-center my-28  '>
-    <button className='px-8 py-4 text-[#FFFFFF] bg-[#2ECC71] rounded-lg' >More News</button>
+
     </div>
-</div>
   )
 }
 
