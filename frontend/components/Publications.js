@@ -15,7 +15,12 @@ const Publications = () => {
 const list=['Authors','Journal','Vol','Pages','Year','Cites as']
   console.log(news)
   return (
- <div className="bg-[#141B17] rounded-lg px-8 py-10   text-gray-300">
+    <div className='w-[75%] mx-auto'>
+<div className='flex'>
+  <div><p className='text-[#398a5b] bg-[#141B17] w-[130px] px-4 py-2 font-semibold rounded-t-lg'>Year 2020</p></div>
+  <div className='bg-black rounded-b-lg '> sjb</div>
+  </div>    
+ <div className="bg-[#141B17] rounded-lg px-8 py-10 rounded-t-none  text-gray-300">
   <div>
     <h2 className='mb-12'>{news[0]?.Title}</h2>
   </div>
@@ -66,7 +71,7 @@ const list=['Authors','Journal','Vol','Pages','Year','Cites as']
     <div>
       
     </div>
-
+    </div>
 </div> 
   )
 }

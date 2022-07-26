@@ -8,7 +8,13 @@ const index = () => {
 <>
     <Hero/>
     <New/>
+    <div className="grid  gap-10">
     <Publications/>
+    <Publications/>
+    <Publications/>
+    <Publications/>
+    </div>
+    
     <Awards/>
     <Contact/>
 </>

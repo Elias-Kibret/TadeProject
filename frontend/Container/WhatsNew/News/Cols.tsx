@@ -7,7 +7,7 @@ const Cols = (props:any) => {
     <div className='mt-24 h-[600px]  grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 place-items-center over gap-x-16 gap-y-10'>
       
           {
-            props.data.map((item:any,index:any)=>{
+            props.data?.map((item:any,index:any)=>{
               return(
                 <div className=' bg-[#141B17] overflow-hidden rounded-xl'>
                   <div className='overflow-hidden w-full object-cover'>

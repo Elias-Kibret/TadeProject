@@ -25,7 +25,7 @@ const Rows = (props) => {
   return (
     <div >
           {
-            props.data.map((news,index)=>{
+            props.data?.map((news,index)=>{
              
               return(
                 <div key={index} className="lg:my-32 flex flex-row flex-wrap-reverse justify-between  bg-[#141B17] py-10 md:py-8 px-6 md:px-20 mx-auto  rounded-xl ">
