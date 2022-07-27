@@ -63,7 +63,7 @@ const list=['Authors','Journal','Vol','Pages','Year','Cites as']
         </ul>
       
       </div>
-      <div className='w-[180px] object-contain'>
+      <div className='w-[180px] object-contain o '>
         <Image src={image} />
       </div>
 
