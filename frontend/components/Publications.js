@@ -22,23 +22,45 @@ const list=['Authors','Journal','Vol','Pages','Year','Cites as']
   </div>    
  <div className="bg-[#141B17] rounded-lg px-8 py-10 rounded-t-none  text-gray-300">
   <div>
-    <h2 className='mb-12'>{news[0]?.Title}</h2>
+    <h2 className='mb-12  text-lg'>{news[0]?.Title}</h2>
   </div>
     <div className='flex justify-between mt-10'>
     <div className=' text-sm flex text-gray-300 '>
-       {
-        <table>
-          {
-            list.map((item,index)=>{
-              return(
-                <tr>
-                  <th className='text-left'>{item}</th>
-                </tr>
-              )
-            })
-          }
-        </table>
-       }
+      <ul className='list-none -my-2  font-semibold w-[100px]'>
+        {
+          list.map((list,index)=>(
+            <li className='my-2' key={list+index}>{list}</li>
+          ))
+        }
+    
+      
+      </ul>
+      <ul className='list-none '>
+        {
+          news.map((List,item)=>{
+            
+              
+            return(
+              <div key={List+item} >
+              {
+                List.Authors.map((item,index)=>{
+                  return(
+                    
+                    <span className='-mt-2' key={index+item} >{index===0?<b className='mx-1'>{item}</b>:<i className='mx-1'>{item}</i>}</span>
+                    
+                  )
+                })
+              }
+              <li className='my-3'><i>{List.Journal}</i></li> 
+              <li className='my-2'><i>{List.Vol}</i></li>
+              <li className='my-2'><i>{List.Pages}</i></li>
+              <li className='my-2'><i>{List.Year}</i></li>
+              <li className='my-2' ><i>{List.Citeas}</i></li>
+              </div> 
+            )
+          })
+        }
+        </ul>
       
       </div>
       <div className='w-[180px] object-contain'>
@@ -55,42 +77,3 @@ const list=['Authors','Journal','Vol','Pages','Year','Cites as']
 }
 
 export default Publications
-
-
-
-
-{/* <ul className='list-none space-y-2 font-semibold w-[100px]'>
-  {
-    list.map((list,index)=>(
-      <li key={list+index}>{list}</li>
-    ))
-  }
-    
-      
-</ul>
-<ul className='list-none '>
-  {
-    news.map((List,item)=>{
-            
-              
-      return(
-        <div key={List+item} >
-        {
-          List.Authors.map((item,index)=>{
-            return(
-                    
-              <span key={index+item} >{index===0?<b className='mx-1'>{item}</b>:<i className='mx-1'>{item}</i>}</span>
-                    
-            )
-          })
-        }
-        <li><i>{List.Journal}</i></li> 
-        <li><i>{List.Vol}</i></li>
-        <li><i>{List.Pages}</i></li>
-        <li><i>{List.Year}</i></li>
-        <li><i>{List.Citeas}</i></li>
-        </div> 
-      )
-    })
-  }
-  </ul> */}

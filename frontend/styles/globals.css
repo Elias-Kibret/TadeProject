@@ -131,3 +131,31 @@ color: #f4fffdff;
 
 
  }
+
+
+ 
+  
+  .typing-demo {
+    width: 8ch;
+    animation: typing 1s steps(8), .3s ;
+    white-space: nowrap;
+    overflow: hidden;
+
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+ 
+ 
