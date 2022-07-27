@@ -69,14 +69,24 @@ color: #f4fffdff;
     background-repeat: none;
     background-size: cover;
     overflow: hidden;
-   
-
-    /* margin-top: -150px; */
-    /* background-position:top ; */
-    /* filter: drop-shadow(-10rem -10rem 17rem rgb(237, 237, 237)); */
-    
-    
-
+}
+.research-hero{
+    background-image: url(../public/Img/HeroImages/Researchhero3.png);
+    width: 100vw;
+    height:22rem ;
+}
+.research{
+    position: absolute;
+    top:30px;
+    margin-left: 40px;
+    text-align: left;
+}
+.about{
+    background-image: url('../public/Img/About.png');
+    background-repeat: none;
+    background-size: cover;
+    overflow: hidden;
+    background-position:center;
 }
 
 .title{
@@ -87,7 +97,6 @@ color: #f4fffdff;
 .hero__WhatsNew{
     width:100%;
     height:340px;
-    
     background-image: url('../public/Img/HeroImages/whatsNewHero.png');
     background-repeat: none;
     background-size: cover;
@@ -137,7 +146,7 @@ color: #f4fffdff;
   
   .typing-demo {
     width: 8ch;
-    animation: typing 1s steps(8), .3s ;
+    animation: typing 2s steps(8), .3s ;
     white-space: nowrap;
     overflow: hidden;
 

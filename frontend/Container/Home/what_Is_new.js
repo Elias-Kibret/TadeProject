@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import {client} from '../../client'
+import Link from 'next/link'
 import Image from 'next/image'
 import {FaMinus} from 'react-icons/fa'
 import RowUI from '../WhatsNew/News/Rows'
@@ -31,7 +32,10 @@ const what_Is_new = () => {
           
         </div>
         <div className='flex justify-center items-center my-28  '>
-        <button className='px-8 py-4 text-[#FFFFFF] bg-[#2ECC71] rounded-lg' >More News</button>
+          <Link href="/awards">
+          <button className='px-8 py-4 text-[#FFFFFF] bg-[#2ECC71] rounded-lg' >More News</button>
+          </Link>
+        
         </div>
 
     </div>

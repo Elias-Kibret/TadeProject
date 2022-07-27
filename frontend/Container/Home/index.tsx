@@ -10,9 +10,6 @@ const index = () => {
     <New/>
     <div className="grid  gap-10">
     <Publications/>
-    <Publications/>
-    <Publications/>
-    <Publications/>
     </div>
     
     <Awards/>

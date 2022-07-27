@@ -8,6 +8,7 @@ import TopNewsRowFromat from './TopNewsRowFromat'
 import TopNewsColumanFormat from './TopNewsColumanFormat'
 import publication from './publication'
 import SelectedAwards from './SelectedAwards'
+import Awards from './Awards'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -20,6 +21,7 @@ export default createSchema({
     TopNewsColumanFormat,
     TopNewsRowFromat,
     publication,
-    SelectedAwards
+    SelectedAwards,
+    Awards
   ]),
 })

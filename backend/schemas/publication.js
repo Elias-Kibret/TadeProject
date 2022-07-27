@@ -1,6 +1,6 @@
 export default{
-    name:'Publications',
-    title:'Publications',
+    name:'TopPublications',
+    title:'TopPublications',
     type:'document',
     fields:[
         {
@@ -26,6 +26,14 @@ export default{
             name:'Vol',
             title:'Vol',
             type:'string'
+        },
+        {
+            name: 'images',
+            title: 'Images ',
+            type: 'image',
+            options:{
+                hotspot:true,
+            }
         },
         {
             name:'Pages',

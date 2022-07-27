@@ -7,13 +7,13 @@ const List = () => {
 
   const [awards,setAwards]=useState([]) 
   useEffect(()=>{
-     const query='*[_type=="SelectedAwards"]'
+     const query='*[_type=="Awards"]'
      client.fetch(query).then((data)=>{
       setAwards(data)
      })
   },[])
   return (
-    <div className='mx-24 mt-32  mx-auto'>
+    <div className='mx-24 mt-32  '>
   
   <Awards data={awards}/>
 
