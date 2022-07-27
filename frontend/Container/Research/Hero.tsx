@@ -5,7 +5,7 @@ import profileImage from '../../public/Img/Tade.png'
 import SocialMediaIcons from '../../components/Icons/SocialMediaIcons'
 const Hero = () => {
   return (
-<main className="bg-[#000000] h-[650px]  mt-16 mx-24"  >
+<main className="bg-[#000000] h-[650px]  mt-20 mx-24"  >
 <div className='xl:pl-24 lg:pl-12 flex items-center justify-between '>
   <div className='w-3/5 '>
     <div className='font-[Poppins] text-5xl font-extrabold pt-20'>

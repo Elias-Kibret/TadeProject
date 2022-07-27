@@ -75,6 +75,9 @@ color: #f4fffdff;
     width: 100vw;
     height:22rem ;
 }
+.link{
+    margin-bottom: 3px;
+}
 .research{
     position: absolute;
     top:30px;

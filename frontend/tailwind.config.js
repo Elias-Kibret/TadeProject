@@ -7,6 +7,7 @@ module.exports = {
     './Container/WhatsNew/News/**/*.{js,ts,jsx,tsx}',
     './Container/WhatsNew/Research/**/*.{js,ts,jsx,tsx}',
     './Container/Awards/**/*.{js,ts,jsx,tsx}',
+    './Container/Navbar/**/*.{js,ts,jsx,tsx}',
     
 
   ],
