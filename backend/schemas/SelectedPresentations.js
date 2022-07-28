@@ -1,28 +1,13 @@
 export default{
-    name:'SelectedPresentations',
-    title:'SelectedPresentations',
+    name:'SelectedPresentations.js',
+    title:'SelectedPresentations.js',
     type:'document',
     fields:[
         {
-            name:'Title',
-            title:'Title',
+            name:'date',
+            title:'Date',
             type:'string'
         },
-        {
-            name:'Authors',
-            title:'Authors',
-            type:'array',
-            of:[{
-                type:'string'
-            }]
-        },
-        
-        {
-            name:'Journal',
-            title:'Journal',
-            type:'string'
-        },
-
         {
             name: 'images',
             title: 'Images ',
@@ -31,20 +16,15 @@ export default{
                 hotspot:true,
             }
         },
-
         {
-            name:'Year',
-            title:'Year',
-            type:'number'
+            name:'decription',
+            title:'Decription',
+            type:'string'
         },
-
         {
-            name:'Link',
+            name:'link',
             title:'Link',
-            type:'array',
-            of:[{
-                type:'string'
-            }]
+            type:'string'
         }
 
 

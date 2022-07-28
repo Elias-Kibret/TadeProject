@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "Container/WhatsNew/News/Rows.js", "Container/Home/what_Is_new.js", "components/Publications.js", "Container/Home/Awards.js", "Container/Home/Awards.js", "pages/about.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "Container/WhatsNew/News/Rows.js", "Container/Home/what_Is_new.js", "components/Publications.js", "Container/Home/Awards.js", "Container/Home/Awards.js", "pages/about.js", "Container/Research/List.js"],
   "exclude": ["node_modules"]
 }
