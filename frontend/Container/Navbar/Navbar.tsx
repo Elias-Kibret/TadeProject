@@ -10,7 +10,7 @@ import Link from 'next/link'
 const icons=[AiOutlineHome,HiNewspaper,RiAwardFill]
 const nav_List=["Home","WhatsNew", "Awards",]
 const Navbar = () => {
-
+const [display, setDisplay]=React.useState<boolean>(false)
   return (
     <>
     <div className=" flex items-center text-sm text-gray-100 ">
@@ -36,8 +36,11 @@ const Navbar = () => {
                 })
             }
             
-      <div  className="flex items-center  cursor-pointer relative " >
-        <DropDown/>
+      <div  className="flex items-center  cursor-pointer relative " onClick={()=>{setDisplay(true)}}>
+        {
+          display&&(<DropDown/>)
+        }
+      
 
 <Link href="/research" className="cursor-pointer ">
     <span className='px-6 flex items-center hover-state'>
