@@ -22,11 +22,7 @@ export default{
             title:'Journal',
             type:'string'
         },
-        {
-            name:'Vol',
-            title:'Vol',
-            type:'string'
-        },
+
         {
             name: 'images',
             title: 'Images ',
@@ -35,21 +31,13 @@ export default{
                 hotspot:true,
             }
         },
-        {
-            name:'Pages',
-            title:'Pages',
-            type:'string'
-        },
+
         {
             name:'Year',
             title:'Year',
             type:'number'
         },
-        {
-            name:'Citeas',
-            title:'CiteAs',
-            type:'string'
-        },
+
         {
             name:'Link',
             title:'Link',
