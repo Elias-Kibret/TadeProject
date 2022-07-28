@@ -1,6 +1,6 @@
 export default{
-    name:'SelectedResearch',
-    title:'SelectedResearch',
+    name:'SelectedPresentations',
+    title:'SelectedPresentations',
     type:'document',
     fields:[
         {
