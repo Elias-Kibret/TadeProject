@@ -33,7 +33,7 @@ const what_Is_new = () => {
         </div>
         <div className='flex justify-center items-center my-28  '>
           <Link href="/awards">
-          <button className='px-8 py-4 text-[#FFFFFF] bg-[#2ECC71] rounded-lg' >More News</button>
+          <button className='px-8 py-4 text-[#FFFFFF] bg-[#2ECC71] rounded-lg' >More</button>
           </Link>
         
         </div>

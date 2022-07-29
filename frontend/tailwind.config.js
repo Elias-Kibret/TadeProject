@@ -8,6 +8,7 @@ module.exports = {
     './Container/WhatsNew/Research/**/*.{js,ts,jsx,tsx}',
     './Container/Awards/**/*.{js,ts,jsx,tsx}',
     './Container/Navbar/**/*.{js,ts,jsx,tsx}',
+    './Container/Research/**/*.{js,ts,jsx,tsx}',
     
 
   ],

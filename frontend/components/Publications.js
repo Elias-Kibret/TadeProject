@@ -4,7 +4,7 @@ import Link from 'next/link'
 import image from '../public/Img/awards/Mask group.jpg'
 import Image from 'next/image'
 
-const Publications = () => {
+const Publications = (props) => {
   const [news,setNew]=useState([]) 
   useEffect(()=>{
      const query='*[_type=="TopPublications"]'
@@ -12,13 +12,13 @@ const Publications = () => {
       setNew(data)
      })
   },[])
+  console.log(props.data)
 const list=['Authors','Journal']
 const links=['Abstract','Publisher','Download Citation']
-  console.log(news)
   return (
-    <div className='w-[75%] mx-auto '>
+    <div className='w-[80%] mx-auto '>
       {
-        news.map((item, index)=>{
+        props?.data.map((item, index)=>{
           return(
             <div className='mt-12'>
 
