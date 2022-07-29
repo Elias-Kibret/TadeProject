@@ -10,6 +10,7 @@ module.exports = {
     './Container/Navbar/**/*.{js,ts,jsx,tsx}',
     './Container/Research/**/*.{js,ts,jsx,tsx}',
     './Container/Publications/**/*.{js,ts,jsx,tsx}',
+    './Container/Presentation/**/*.{js,ts,jsx,tsx}',
     
 
   ],
@@ -37,7 +38,7 @@ module.exports = {
       'sm': '.78rem',
       'tiny': '.875rem',
       'base': '1rem',
-      'lg': '.9rem',
+      'lg': '1rem',
       'xl': '1.25rem',
       '2xl': '1.5rem',
       '3xl': '1.875rem',

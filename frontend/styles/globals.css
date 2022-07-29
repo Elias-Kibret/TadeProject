@@ -86,7 +86,7 @@ color: #f4fffdff;
     text-align: left;
 }
 .about{
-    background-image: url('../public/Img/About.png');
+    background-image: url('../public/Img/HeroImages/aboutimage.png');
     background-repeat: none;
     background-size: cover;
     overflow: hidden;
@@ -94,7 +94,7 @@ color: #f4fffdff;
 }
 .presentation_hero{
     background-image: url(../public/Img/HeroImages/Speaker.png);
-    height: 450px;
+    height: 400px;
     background-repeat: none;
     background-size:contain;
     overflow: hidden;
