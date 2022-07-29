@@ -4,16 +4,17 @@ import SocialMediaIcons from '../../components/Icons/SocialMediaIcons'
 const Hero = () => {
   return (
 <main className="bg-[#000000]  mt-16 "  >
-<div className='w-[80%] mx-auto  flex items-center '>
+<div className='w-[80%]   flex items-center '>
 
-<div className='awards_hero px-32 flex justify-center items-center ' >
+<div className='awards_hero  flex justify-center items-center ' >
          
   </div>
 
   <div className='  '>
-  <div className='mx-8'>
+  <div className=''>
     <div className='mt-32 flex w-full'>
-        <h1 className='text-[#FFFFFF]  title text-6xl'>Selected Awards <br/> <span className='text-[#2Ecc71] '>and Recognitions</span> </h1> 
+        <h1 className='text-[#FFFFFF]  title text-6xl'> <span className='text-[#2Ecc71] 
+        '>Publications</span> </h1> 
       </div>
       <div className='hidden sm:flex' >
       <SocialMediaIcons/>

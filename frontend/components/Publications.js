@@ -72,7 +72,7 @@ const links=['Abstract','Publisher','Download Citation']
                   {
                     links.map((item,index)=>{
                       return(
-                        <Link href=""><a className='mr-5 underline text-xs '>{item}</a></Link>
+                        <Link href=""><a className=' underline text-xs '>{item}</a></Link>
                       )
                     })
                   }

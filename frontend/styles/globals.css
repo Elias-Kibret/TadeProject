@@ -81,7 +81,7 @@ color: #f4fffdff;
 }
 .research{
     position: absolute;
-    padding-top: 100px;
+    padding:100px 20px 20px 20px;
     margin-left: 40px;
     text-align: left;
 }
@@ -92,7 +92,14 @@ color: #f4fffdff;
     overflow: hidden;
     background-position:center;
 }
-
+.presentation_hero{
+    background-image: url(../public/Img/HeroImages/Speaker.png);
+    height: 450px;
+    background-repeat: none;
+    background-size:contain;
+    overflow: hidden;
+    background-position:center;
+}
 .title{
     padding: 2rem 0rem;
     font-weight: bolder;

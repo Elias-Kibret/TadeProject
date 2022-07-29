@@ -4,7 +4,6 @@ import {RiAwardFill} from 'react-icons/ri'
 import {HiOutlineDocumentReport,HiNewspaper} from 'react-icons/hi'
 import {IoIosArrowDroprightCircle} from 'react-icons/io'
 import {BiCaretDown} from 'react-icons/bi'
-import DropDown from './DropDown'
 import Link from 'next/link'
 
 const icons=[AiOutlineHome,HiNewspaper,RiAwardFill]
@@ -48,7 +47,7 @@ const [display, setDisplay]=React.useState<boolean>(false)
             >
             <Link href="/publications" ><a className='link'>Publications</a></Link>
       
-            <Link href="/awards"><a className='link'>Selected Presentation</a></Link>
+            <Link href="/presentation"><a className='link'>Selected Presentation</a></Link>
         </div>
 
           
