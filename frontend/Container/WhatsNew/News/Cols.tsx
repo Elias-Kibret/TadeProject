@@ -14,9 +14,9 @@ const Cols = (props:any) => {
                   <img src={urlFor(props.data[index].imagesGallery.asset._ref).url()} className=" w-full h-[250px] object-cover overflow-hidden" />
                   </div>
 
-                <div className='mx-4 h-[250px]'>
+                <div className='mx-4 h-[200px]'>
                 <span className='block my-4 text-[#2ECC71]'>{item.date}</span>
-                <p className='my-10  text-[#FFFFFF] leading-6 text-justify font-light'>
+                <p className='my-10  text-[#FFFFFF] leading-6 text-justify font-light text-sm'>
                   
            {item.decription}
                   </p>

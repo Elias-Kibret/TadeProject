@@ -9,6 +9,7 @@ module.exports = {
     './Container/Awards/**/*.{js,ts,jsx,tsx}',
     './Container/Navbar/**/*.{js,ts,jsx,tsx}',
     './Container/Research/**/*.{js,ts,jsx,tsx}',
+    './Container/Publications/**/*.{js,ts,jsx,tsx}',
     
 
   ],
@@ -30,6 +31,20 @@ module.exports = {
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
+    },
+    fontSize: {
+      'xs': '.75rem',
+      'sm': '.78rem',
+      'tiny': '.875rem',
+      'base': '1rem',
+      'lg': '.9rem',
+      'xl': '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
+      '7xl': '5rem',
     },
     extend: {},
     fontFamily:{

@@ -1,6 +1,6 @@
 export default{
-    name:'SelectedPresentations.js',
-    title:'SelectedPresentations.js',
+    name:'SelectedPresentations',
+    title:'SelectedPresentations',
     type:'document',
     fields:[
         {
@@ -9,12 +9,19 @@ export default{
             type:'string'
         },
         {
-            name: 'images',
-            title: 'Images ',
-            type: 'image',
+            name: 'imagesGallery',
+            title: 'Images gallery',
+            type: 'array',
+            of: [{
+                type: 'image' }],
             options:{
                 hotspot:true,
             }
+        },
+        {
+            name:'Title',
+            title:'Title',
+            type:'string'
         },
         {
             name:'decription',
@@ -26,10 +33,11 @@ export default{
             title:'Link',
             type:'string'
         }
-
-
-
-
+        ,{
+            name:'Year',
+            title:'Year',
+            type:'number'
+        }
     ]
      
 }

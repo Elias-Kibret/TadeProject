@@ -36,9 +36,23 @@ const [display, setDisplay]=React.useState<boolean>(false)
                 })
             }
             
-      <div  className="flex items-center  cursor-pointer relative " onClick={()=>{setDisplay(true)}}>
+      <div  className="flex items-center  cursor-pointer relative " 
+      onMouseEnter={()=>{setDisplay(true)}}
+      onMouseLeave={()=>{setDisplay(false)}}
+      >
         {
-          display&&(<DropDown/>)
+          display&&(
+            <div className='research w-[200px] bg-[black]  flex flex-col'
+            onMouseEnter={()=>{setDisplay(true)}}
+            onMouseLeave={()=>{setDisplay(false)}}
+            >
+            <Link href="/publications" ><a className='link'>Publications</a></Link>
+      
+            <Link href="/awards"><a className='link'>Selected Presentation</a></Link>
+        </div>
+
+          
+          )
         }
       
 

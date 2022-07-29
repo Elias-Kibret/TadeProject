@@ -14,31 +14,29 @@ const Rows = (props) => {
         }
         
 
-  const [news,setNew]=useState([]) 
-  useEffect(()=>{
-     const query='*[_type=="news"]'
-     client.fetch(query).then((data)=>{
-      setNew(data)
-     })
-  },[])
-  
+
+
   return (
     <div >
           {
-            props.data?.map((news,index)=>{
+            props.data?.map((item,index)=>{
              
               return(
                 <div key={index} className="lg:my-32 flex flex-row flex-wrap-reverse justify-between  bg-[#141B17] py-10 md:py-8 px-6 md:px-20 mx-auto  rounded-xl ">
                 <div className=' flex flex-col w-[50%] justify-center'>
-                   <h3 className='p text-[#2ECC71] mb-8'>{props.data[index].date}</h3>
-                   <p className="text-gray-300 leading-8 text-justify font-light ">{props.data[index].decription}</p>
+                   <h3 className='p text-[#2ECC71] mb-4 '>{item.date}</h3>
+                   {
+                    item.Title&&(<h3 className='p text-gray-300 text-2xl  mb-4'>{item.Title}</h3>)
+                   }
+                   
+                   <p className="text-gray-300 leading-8 text-justify font-light text-sm">{item.decription}</p>
                 </div>
                 <div className='w-[30%]'>
 
                
                 <Slider {...settings} className="rounded-xl overflow-hidden ">
              {
-              props.data[index].imagesGallery.map((images,index)=>{
+              item?.imagesGallery.map((images,index)=>{
                 return(
                 <div key={images.asset._ref} className='w-[100px] object-contain'>
                   <img 

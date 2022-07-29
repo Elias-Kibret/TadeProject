@@ -30,7 +30,7 @@ const Awards = (props) => {
               <Slider {...settings} className="overflow-hidden ">
               {
                   props.data[index].imagesGallery?.map((img,index)=>{
-                    console.log(img)
+                    
                     return(
                       
                         <img src={urlFor(img.asset._ref).url()} className=" w-full h-[350px] object-cover  overflow-hidden" />
@@ -45,13 +45,14 @@ const Awards = (props) => {
 
             </div>
 
-          <div className='mx-4 h-[250px] px-4'>
-          <span className='block my-4 text-[#2ECC71]'>{item.date}</span>
-          <h2 className='text-xl text-gray-200 font-semibold'>{item.Title}</h2>
-          <p className='my-10  text-[#FFFFFF] leading-6 text-justify font-light'>
+          <div className='mx-4 mt-6 h-[200px] px-4'>
+          
+          <h2 className='text-xl h-[3rem] text-gray-200 font-semibold'>{item.Title}</h2>
+          <p className='my-5 text-sm text-[#FFFFFF] leading-6 text-justify font-light'>
               
      {item.decription}
             </p>
+            <span className='block my-4 text-[#2ECC71]'>{item.date}</span>
           </div>
         </div>  
         )

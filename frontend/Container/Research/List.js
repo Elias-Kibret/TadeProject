@@ -2,21 +2,24 @@ import React,{useState,useEffect} from 'react'
 import { client } from '../../client'
 import Link from 'next/link'
 import Publications from '../../components/Publications'
+import Rows from '../WhatsNew/News/Rows'
 const List = () => {
   const [selectedPublication,setSelectedPublications]=useState([]) 
-  const [SelectedPresentations,setSelectedPresentations]=useState([])
+  const [selectedPresentations,setSelectedPresentations]=useState([])
   useEffect(()=>{
      const publications='*[_type=="SelectedPublications"]'
-     const presentations='*[_type=="SelectedPublications"]'
+     const presentations='*[_type=="SelectedPresentations"]'
+
      client.fetch(publications).then((data)=>{
       setSelectedPublications(data)
      })
+
      client.fetch(presentations).then((data)=>{
       setSelectedPresentations(data)
      })
   },[])
-  console.log(selectedPublication)
-  console.log(SelectedPresentations)
+  // console.log(  selectedPublication)
+  console.log(selectedPresentations)
   return (
 <div className="mt-8  items-center justify-between px-10">
    <div className='mt-10 '>
@@ -42,9 +45,7 @@ const List = () => {
    <div className='my-22'>
     <h3 className="text-[#FFFFFF] text-3xl ">Selected presentations</h3>
    </div>
-  <img src={}/>
-        
-    </div>
+   <Rows data={selectedPresentations}/>
    </div>
 
 </div>

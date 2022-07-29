@@ -6,12 +6,13 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import news from './news'
 import TopNewsRowFromat from './TopNewsRowFromat'
 import TopNewsColumanFormat from './TopNewsColumanFormat'
-import publication from './publication'
+import Toppublication from './Toppublication'
 import SelectedAwards from './SelectedAwards'
 import Awards from './Awards'
 import SelectedPresentations from './SelectedPresentations'
 import selectedPublications from './selectedPublications'
 import Presentations from './Presentations'
+import publications from './publications'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,11 +25,12 @@ export default createSchema({
     news,
     TopNewsColumanFormat,
     TopNewsRowFromat,
-    publication,
+    Toppublication,
     SelectedAwards,
     Awards, 
     selectedPublications,
     SelectedPresentations,
-    Presentations
+    Presentations,
+    publications
   ]),
 })
