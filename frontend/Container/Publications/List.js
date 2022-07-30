@@ -39,7 +39,7 @@ console.log(publication)
                         </button>
                         {
                           display&&(
-                            <div className='research w-[200px] bg-[black]  flex flex-col '
+                            <div className='years w-[200px] bg-[black]  flex flex-col '
                             onMouseEnter={()=>{setDisplay(true)}}
                             onMouseLeave={()=>{setDisplay(false)}}
                             >

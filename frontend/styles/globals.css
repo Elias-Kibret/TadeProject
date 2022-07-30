@@ -92,6 +92,12 @@ color: #f4fffdff;
     overflow: hidden;
     background-position:center;
 }
+.years{
+    position: absolute;
+    top:1.2rem;
+    padding:10px;
+
+}
 .presentation_hero{
     background-image: url(../public/Img/HeroImages/Speaker.png);
     height: 400px;

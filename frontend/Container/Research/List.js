@@ -28,7 +28,7 @@ const List = () => {
    <div>
    <Publications  data={selectedPublication} />
    <div className='flex justify-center items-center my-28  '>
-      <Link href="/awards">
+      <Link href="/publications">
       <button className='px-8 py-4 text-[#FFFFFF] bg-[#2ECC71] rounded-lg' >More</button>
       </Link>
         
@@ -44,6 +44,12 @@ const List = () => {
    </div>
    <Rows data={selectedPresentations}/>
    </div>
+   <div className='flex justify-center items-center my-28  '>
+    <Link href="/presentation">
+    <button className='px-8 py-4 text-[#FFFFFF] bg-[#2ECC71] rounded-lg' >More</button>
+    </Link>
+        
+  </div>
 
 </div>
   )
