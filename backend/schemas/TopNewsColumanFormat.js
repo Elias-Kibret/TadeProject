@@ -9,9 +9,11 @@ export default{
             type:'string'
         },
         {
-            name: 'images',
-            title: 'Images ',
-            type: 'image',
+            name: 'imagesGallery',
+            title: 'Images gallery',
+            type: 'array',
+            of: [{
+                type: 'image' }],
             options:{
                 hotspot:true,
             }
