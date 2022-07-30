@@ -1,5 +1,5 @@
 export default{
-    name:'news',
+    name:'News',
     title:'News',
     type:'document',
     fields:[
