@@ -14,6 +14,13 @@ const List = () => {
         setPublications(data)
        })
     },[])
+
+   const filter=(year)=>{
+      setPublications(publication.filter((item,index)=>{
+        return item.Year===year
+      }))
+   }
+
 console.log(publication)
   return (
     <div>
@@ -45,7 +52,9 @@ console.log(publication)
                             >
                               {
                                 year.map((item,index)=>(
-                                  <button ><a className=''>{item}</a></button>
+                                  <button ><a className='' onClick={()=>{
+                                    filter(item)
+                                  }}>{item}</a></button>
                                 ))
                               }
                           

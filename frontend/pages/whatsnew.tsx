@@ -1,4 +1,4 @@
-import Index from "../Container/WhatsNew"
+import Index from "../Container/WhatsNew/index"
 const whatIsNew = () => {
   return (
     <>
