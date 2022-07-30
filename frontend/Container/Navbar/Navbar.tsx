@@ -45,7 +45,7 @@ const [display, setDisplay]=React.useState<boolean>(false)
             onMouseEnter={()=>{setDisplay(true)}}
             onMouseLeave={()=>{setDisplay(false)}}
             >
-            <Link href="/publications" ><a className='link'>Publications</a></Link>
+            <Link href="/publications" ><span className='link'>Publications</span></Link>
       
             <Link href="/presentation"><a className='link'>Selected Presentation</a></Link>
         </div>
