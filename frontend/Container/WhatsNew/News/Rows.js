@@ -31,17 +31,17 @@ const Rows = (props) => {
                    
                    <p className="text-gray-300 leading-8 text-justify font-light text-sm">{item.decription}</p>
                 </div>
-                <div className='w-[30%]'>
+                <div className='w-[30%] h-[250px]'>
 
                
-                <Slider {...settings} className="rounded-xl overflow-hidden ">
+                <Slider {...settings} className="rounded-xl overflow-hidden object-cover">
              {
               item?.imagesGallery.map((images,index)=>{
                 console.log(images)
                 return(
-                <div key={images.asset._ref} className='w-[100px] object-contain'>
+                <div key={images.asset._ref} className='w-[100px] object-cover h-[200px]'>
                   <img 
-                      src={urlFor(images.asset._ref)} width='450px' height='300px' 
+                      src={urlFor(images.asset._ref)} width='450px' height='200px' 
                       className="object-cover overflow-hidden rounded-xl"/>
   
                 </div>
