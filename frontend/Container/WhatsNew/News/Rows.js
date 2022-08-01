@@ -37,7 +37,6 @@ const Rows = (props) => {
                 <Slider {...settings} className="rounded-xl overflow-hidden object-cover">
              {
               item?.imagesGallery.map((images,index)=>{
-                console.log(images)
                 return(
                 <div key={images.asset._ref} className='w-[100px] object-cover h-[200px]'>
                   <img 

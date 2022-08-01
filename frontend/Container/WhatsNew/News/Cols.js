@@ -1,0 +1,60 @@
+import Image from 'next/image'
+import { urlFor } from '../../../client'
+import Slider from 'react-slick'
+const Cols = (props) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay:true,
+    cssEase: "linear", 
+  }
+  console.log(props.datasearch)
+  return (
+    <div className='xs:grid-cols-2 lg:grid-cols-3 place-items-center over gap-x-16 gap-y-10  overflow-hidden  grid grid-cols-1'>
+      
+          {
+            props.data?.map((item,index)=>{
+              return(
+                <div className=' bg-[#141B17] overflow-hidden rounded-xl  w-[350px]' key={item+index}>
+                <div className=''>
+
+               
+<Slider {...settings} className=" overflow-hidden object-cover">
+{
+item?.imagesGallery.map((images,index)=>{
+console.log(images)
+return(
+<div key={images.asset._ref} className='object-cover h-[16rem]'>
+  <img 
+      src={urlFor(images.asset._ref)} width='450px' height='250px' 
+      className="object-cover overflow-hidden "/>
+
+</div>
+)})
+}
+</Slider>
+</div>
+
+                <div className='mx-4 h-[10rem]'>
+                <span className='block my-4 text-[#2ECC71]'>{item.date}</span>
+                <p className='my-4  text-[#FFFFFF] leading-6 text-justify font-light text-sm'>
+                  
+           {item.decription}
+                  </p>
+                </div>
+              </div>  
+              )
+            })
+          }
+
+          
+                  
+        
+    </div>
+  )
+}
+
+export default Cols

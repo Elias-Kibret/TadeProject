@@ -23,7 +23,7 @@ const Awards = (props) => {
       
     {
       props.data?.map((item,index)=>{
-        console.log(props.data[index])
+        // console.log(props.data[index])
         return(
           <div className=' bg-[#141B17]  rounded-xl w-[500px] pb-12 overflow-hidden' key={item+index}>
             <div className=' h-[350px] overflow-hiiden object-cover'>
