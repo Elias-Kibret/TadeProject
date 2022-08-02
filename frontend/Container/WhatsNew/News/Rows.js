@@ -48,6 +48,7 @@ const Rows = (props) => {
              }
 </Slider>
       </div>
+      
       </div>
               )
 
