@@ -19,22 +19,28 @@ const Awards = (props) => {
       // console.log(props.data)
 
   return (
-    <div className='m xs:grid-cols-1 lg:grid-cols-2 overflow-hidden place-items-center over gap-x-16 gap-y-20 t-24  grid grid-cols-1' >
+    <div className='xs:grid-cols-2 lg:grid-cols-3 place-items-center over gap-x-16 gap-y-10  overflow-hidden  grid grid-cols-1'>
       
     {
       props.data?.map((item,index)=>{
         // console.log(props.data[index])
         return(
-          <div className=' bg-[#141B17]  rounded-xl w-[500px] pb-12 overflow-hidden' key={item+index}>
+          <div className=' bg-[#141B17]  rounded-xl w-[350px] pb-12 overflow-hidden' key={item+index}>
             <div className=' h-[350px] overflow-hiiden object-cover'>
-              <Slider {...settings} className="overflow-hidden ">
+              <Slider {...settings} className=" overflow-hidden object-cover">
               {
                   props.data[index].imagesGallery?.map((img,index)=>{
                     
                     return(
                       
-                        <img src={urlFor(img.asset._ref).url()} className=" w-full h-[350px] object-cover  overflow-hidden" />
+                        // <img className=" w-full h-[350px] object-cover  overflow-hidden" />
                       
+                        <div key={img.asset?._ref} className='object-cover h-[16rem]'>
+                        <img 
+                            src={urlFor(img.asset._ref).url()}  
+                            className="object-cover overflow-hidden "/>
+  
+                      </div>
                       
                     )
                   })
@@ -45,9 +51,9 @@ const Awards = (props) => {
 
             </div>
 
-          <div className='mx-4 mt-6 h-[200px] px-4'>
+          <div className='mx-4  px-4'>
           
-          <h2 className='text-xl h-[3rem] text-gray-200 font-semibold'>{item.Title}</h2>
+          <h2 className='text-xl text-gray-200 font-semibold'>{item.Title}</h2>
           <p className='my-5 text-sm text-[#FFFFFF] leading-6 text-justify font-light'>
               
      {item.decription}
