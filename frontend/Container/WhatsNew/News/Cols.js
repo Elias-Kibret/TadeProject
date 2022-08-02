@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { urlFor } from '../../../client'
 import Slider from 'react-slick'
+import Link from 'next/link'
+import Button from '../../Home/Hero/Button'
 const Cols = (props) => {
   const settings = {
     dots: true,
@@ -16,6 +18,7 @@ const Cols = (props) => {
       
           {
             props.data?.map((item,index)=>{
+              
               return(
                 <div className=' bg-[#141B17] overflow-hidden rounded-xl  w-[350px]' key={item+index}>
                 <div className=''>
@@ -24,13 +27,15 @@ const Cols = (props) => {
 <Slider {...settings} className=" overflow-hidden object-cover">
 {
 item?.imagesGallery.map((images,index)=>{ 
+//  console.log(images.asset)
 return(
-<div key={images.asset._ref} className='object-cover h-[16rem]'>
+
+ <div key={images.asset?._ref} className='object-cover h-[16rem]'>
   <img 
-      src={urlFor(images.asset._ref)} width='450px' height='250px' 
+      src={urlFor(images.asset?._ref)} width='450px' height='250px' 
       className="object-cover overflow-hidden "/>
 
-</div>
+</div> 
 )})
 }
 </Slider>
@@ -38,11 +43,15 @@ return(
 
                 <div className='mx-4 h-[10rem]'>
                 <span className='block my-4 text-[#2ECC71]'>{item.date}</span>
-                <p className='my-4  text-[#FFFFFF] leading-6 text-justify font-light text-sm'>
+                <p className='mt-4  text-[#FFFFFF] leading-6 text-justify font-light text-sm'>
                   
            {item.decription}
                   </p>
                 </div>
+                <div className='my-4 mx-5'>
+                <Link href={'/whatsnew/'+item._id} ><a className="text-[blue] my-4">See more</a></Link>
+                </div>
+              
               </div>  
               )
             })
