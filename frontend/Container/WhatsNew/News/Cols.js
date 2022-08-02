@@ -11,7 +11,6 @@ const Cols = (props) => {
     autoplay:true,
     cssEase: "linear", 
   }
-  console.log(props.datasearch)
   return (
     <div className='xs:grid-cols-2 lg:grid-cols-3 place-items-center over gap-x-16 gap-y-10  overflow-hidden  grid grid-cols-1'>
       
@@ -24,8 +23,7 @@ const Cols = (props) => {
                
 <Slider {...settings} className=" overflow-hidden object-cover">
 {
-item?.imagesGallery.map((images,index)=>{
-console.log(images)
+item?.imagesGallery.map((images,index)=>{ 
 return(
 <div key={images.asset._ref} className='object-cover h-[16rem]'>
   <img 
