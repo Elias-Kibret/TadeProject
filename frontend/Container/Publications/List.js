@@ -24,7 +24,7 @@ const List = () => {
   return (
     <div>
         <div>
-        <div className="flex my-16 mx-24  items-center ">
+        <div className="flex md: my-16 lg:mx-24  items-center flex-col sm:flex-row">
                <div><h3 className="text-[#FFFFFF] text-3xl  "><span className='text-[#2ecc71] font-semibold text-4xl '> {publication.length} </span> Publications </h3></div>
                <div className="flex items-center  text-[#FFFFFF] mx-14">
                 <button className="bg-[#2ecc71] px-4 py-2 mr-6  rounded-lg">Filter</button>
@@ -35,10 +35,10 @@ const List = () => {
                         <button href="/research" className="cursor-pointer ">
                             <span className='px-6 flex items-center hover-state'>
                      
-                            <Link href="" className="px-2 cursor-pointer">
+                            <button>
 
                               Year
-                                      </Link>
+                                      </button>
                                     <BiCaretDown/>                
 
                             </span>

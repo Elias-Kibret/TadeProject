@@ -45,11 +45,11 @@ const handleEvent=(abstract_title,abstract,link)=>{
         }
       
       
-        <div className='mx-auto w-[80%] grid  gap-x-10 ]'>
+        <div className='mx-auto w-[95%] lg:w-[80%] grid  gap-x-10 ]'>
               {
                 props?.data.map((item, index)=>{
                   return(
-                    <div className='mt-12'>
+                    <div className='mt-12 mx-8'>
 
 
 
@@ -59,8 +59,8 @@ const handleEvent=(abstract_title,abstract,link)=>{
     
                       </div> 
        
-                     <div className="bg-[#141B17] h-[250px] rounded-2xl px-8  rounded-t-none flex justify-between items-center text-gray-300">
-                     <div className='pr-10 w-[100%]'>
+                     <div className="bg-[#141B17]  rounded-2xl px-8 py-8 rounded-t-none flex justify-center md:justify-between flex-wrap items-center text-gray-300">
+                     <div className='w-[100%] md:w-[75%]'>
                       <div>
                         <h2 className=' text-lg'>{item.Title}</h2>
                       </div>
@@ -102,28 +102,35 @@ const handleEvent=(abstract_title,abstract,link)=>{
         
   
                         </div>
-                        <div className='mt-3 flex items-end'>
-                          {
-                            links.map((link,index)=>{
+                        <div className='md:flex justify-between items-center'>
+                        <div className='mt-3 flex  flex-col'>
+                            {
+                              links.map((link,index)=>{
                               
-                              const Icon=icons[index]
-                              return(
-                                <div className='flex mr-4'   onClick={()=>{handleEvent(item.Abstract_Title,item.Abstract,link)}}>
-                                  <Link href="">
-                                  <a className=' underline text-xs  flex mr-1'>{link}</a></Link>
-                                  <Icon/>
-                                </div>
+                                const Icon=icons[index]
+                                return(
+                                  <div>
+                                    <div className='flex mr-4 '   onClick={()=>{handleEvent(item.Abstract_Title,item.Abstract,link)}}>
+                                      <Link href="">
+                                      <a className=' underline text-xs  flex mr-2'>{link}</a></Link>
+                                      <Icon/>
+                                    </div>
+                                  </div>
+
                         
-                              )
-                            })
-                          }
+                                )
+                              })
+                            }
+                          </div>
+                          <div className='md:w-[25%] object-cover mt-6 '>
+                            <img src={urlFor(item.images.asset._ref)} width='120px' height='250px' className='object-cover'/>
+                          </div>
                         </div>
+                        
       
   
                         </div>
-                        <div className='w-[25%] object-cover '>
-                            <img src={urlFor(item.images.asset._ref)} width='120px' height='250px' className='object-cover'/>
-                          </div>
+                      
                         </div>
                         </div>
                   )
