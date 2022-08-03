@@ -35,10 +35,10 @@ const List = () => {
                         <button href="/research" className="cursor-pointer ">
                             <span className='px-6 flex items-center hover-state'>
                      
-                            <button>
+                            <a>
 
                               Year
-                                      </button>
+                                      </a>
                                     <BiCaretDown/>                
 
                             </span>
