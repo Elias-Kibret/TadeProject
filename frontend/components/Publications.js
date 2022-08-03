@@ -9,23 +9,21 @@ import { IconContext } from 'react-icons'
 
 const Publications = (props) => {
 const [showModal,setShowModal]=useState(true)
-
+const [abstract, setAbstract]=useState('')
+const [abstract_title, setAbstract_title]=useState('')
 const list=['Authors','Journal']
 const links=['View Abstract','View at Publisher','Download Citation']
 const icons=[BiRightTopArrowCircle ,HiOutlineExternalLink,BiDownload]
 
-const abstract=''
-const abstract_title=''
-const handleEvent=(item,link)=>{
+
+const handleEvent=(abstract_title,abstract,link)=>{
  if(link==='View Abstract'){
   setShowModal(!showModal)
+  setAbstract(abstract)
+  setAbstract_title(abstract_title)
  }
- abstract_title=item.Abstract_Title
- abstract=item.Abstract
-
-
- 
 }
+
 
   return (
       <div className='relative'>
@@ -110,7 +108,7 @@ const handleEvent=(item,link)=>{
                               
                               const Icon=icons[index]
                               return(
-                                <div className='flex mr-4'   onClick={()=>{handleEvent(item,link)}}>
+                                <div className='flex mr-4'   onClick={()=>{handleEvent(item.Abstract_Title,item.Abstract,link)}}>
                                   <Link href="">
                                   <a className=' underline text-xs  flex mr-1'>{link}</a></Link>
                                   <Icon/>
