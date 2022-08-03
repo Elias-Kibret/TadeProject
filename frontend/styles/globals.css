@@ -108,7 +108,7 @@ color: #f4fffdff;
 .title{
     padding: 2rem 0rem;
     font-weight: bolder;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 .hero__WhatsNew{
     width:100%;
@@ -121,14 +121,14 @@ color: #f4fffdff;
 }
 
 .awards_hero{
-    padding: 0px 200px !important;
-    width:400px;
-    height:500px;
-    margin: 0px 100px 0px 150px;
+    padding: 0px 150px !important;
+    width:150px;
+    height:330px;
+    /* margin: 0px 100px 0px 150px; */
     background-image: url('../public/Img/HeroImages/awardHero.png');
     background-repeat: none;
     background-size:  cover;
-    background-position: center;
+    background-position: bottom;
     background-color: rgba(0,0,0,0.4);
 }
 .whatNew{
@@ -154,7 +154,17 @@ color: #f4fffdff;
         font-weight: bolder;
         font-size: 50px;
     }
-
+    .awards_hero{
+        padding: 0px 200px !important;
+        width:400px;
+        height:500px;
+        margin: 0px 100px 0px 150px;
+        background-image: url('../public/Img/HeroImages/awardHero.png');
+        background-repeat: none;
+        background-size:  cover;
+        background-position: center;
+        background-color: rgba(0,0,0,0.4);
+    }
 
  }
 

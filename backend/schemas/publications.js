@@ -35,11 +35,16 @@ export default{
                 hotspot:true,
             }
         },
-        // {
-        //     name:'Pages',
-        //     title:'Pages',
-        //     type:'string'
-        // },
+        {
+            name:'Abstract_Title',
+            title:'Abstract_Title',
+            type:'string'
+        },
+        {
+            name:'Abstract',
+            title:'Abstract',
+            type:'string'
+        },
         {
             name:'Year',
             title:'Year',
@@ -50,11 +55,7 @@ export default{
             title:'Description',
             type:'string'
         },
-        // {
-        //     name:'Citeas',
-        //     title:'CiteAs',
-        //     type:'string'
-        // },
+        
         {
             name:'Link',
             title:'Link',

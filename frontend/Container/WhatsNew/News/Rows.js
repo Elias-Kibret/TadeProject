@@ -22,8 +22,8 @@ const Rows = (props) => {
             props?.data.map((item,index)=>{
              
               return(
-                <div key={index} className="lg:my-20 flex flex-row flex-wrap-reverse justify-between  bg-[#141B17] py-10 md:py-8 px-6 md:px-20 mx-auto  rounded-xl ">
-                <div className=' flex flex-col w-[50%] justify-center'>
+                <div key={index} className="mx-8 my-10 lg:my-20 flex flex-row flex-wrap-reverse justify-between  bg-[#141B17] py-10 md:py-8 px-6 md:px-20   rounded-xl ">
+                <div className=' flex flex-col  w-[100%] lg:w-[50%] justify-center'>
                    <h3 className='p text-[#2ECC71] mb-4 '>{item.date}</h3>
                    {
                     item.Title&&(<h3 className='p text-gray-300 text-2xl  mb-4'>{item.Title}</h3>)
@@ -31,7 +31,7 @@ const Rows = (props) => {
                    
                    <p className="text-gray-300 leading-8 text-justify font-light text-sm">{item.decription}</p>
                 </div>
-                <div className='w-[30%] h-[250px]'>
+                <div className='lg:w-[30%] w-[100%] h-[250px]'>
 
                
                 <Slider {...settings} className="rounded-xl overflow-hidden object-cover">

@@ -21,7 +21,6 @@ const List = () => {
       }))
    }
 
-console.log(publication)
   return (
     <div>
         <div>
