@@ -103,7 +103,7 @@ const handleEvent=(abstract_title,abstract,link)=>{
   
                         </div>
                         <div className='md:flex justify-between items-center'>
-                        <div className='mt-3 flex  flex-col'>
+                        <div className='mt-3 flex  flex-col md:flex-row'>
                             {
                               links.map((link,index)=>{
                               
@@ -122,7 +122,7 @@ const handleEvent=(abstract_title,abstract,link)=>{
                               })
                             }
                           </div>
-                          <div className='md:w-[25%] object-cover mt-6 '>
+                          <div className='md:w-[25%] object-cover mt-6 md:hidden'>
                             <img src={urlFor(item.images.asset._ref)} width='120px' height='250px' className='object-cover'/>
                           </div>
                         </div>
@@ -130,7 +130,9 @@ const handleEvent=(abstract_title,abstract,link)=>{
       
   
                         </div>
-                      
+                        <div className='md:w-[25%] object-cover mt-6 hidden md:block '>
+                            <img src={urlFor(item.images.asset._ref)} width='120px' height='250px' className='object-cover'/>
+                          </div>
                         </div>
                         </div>
                   )
