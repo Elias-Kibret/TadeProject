@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { client } from '../../client'
 import {FaMinus} from 'react-icons/fa'
 import Award from '../Awards/Awards'
+import Link from 'next/link'
 const Awards = () => {
   const [awards,setAwards]=useState([]) 
   useEffect(()=>{
@@ -20,7 +21,7 @@ const Awards = () => {
           <Award data={awards}/>
         </div>
         <div className='flex justify-center items-center my-28 hover-state '>
-        <button className='px-8 py-4 text-[#FFFFFF] bg-[#2ECC71] rounded-lg' >More News</button>
+        <button className='px-8 py-4 text-[#FFFFFF] bg-[#2ECC71] rounded-lg' ><Link href="/awards">More</Link></button>
         </div>
     </div>
   )
