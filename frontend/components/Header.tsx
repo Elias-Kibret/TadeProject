@@ -3,8 +3,8 @@ import React from "react"
 import Navbar from "../Container/Navbar/Navbar"
 import Link from "next/link"
 import Image from "next/image"
-import {HiMenu} from 'react-icons/hi'
-import {ImCross} from 'react-icons/im'
+import {HiOutlineX,HiMenu} from 'react-icons/hi'
+
 import {IoIosArrowDroprightCircle} from 'react-icons/io'
 import Publications from "./Publications"
 import { useState } from "react"
@@ -21,7 +21,7 @@ const Header = () => {
     <span className="text-gray-200  "><span className=" font-bold ">Tadesse </span>G. Wakjira</span>
     <div className='text-[#2Ecc71] md:hidden' onClick={()=>{setShow(!show)}}>
          {
-          show?<ImCross size={28}/>:<HiMenu size={36}/>
+          show?<HiOutlineX size={28}/>:<HiMenu size={36}/>
          }
     </div>
       </div>
