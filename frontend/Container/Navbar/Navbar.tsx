@@ -12,14 +12,14 @@ const Navbar = () => {
 const [display, setDisplay]=React.useState<boolean>(false)
   return (
     <>
-    <div className=" flex items-center text-sm text-gray-100 ">
+    <div className=" flex flex-col bg-[#000000] w-full  md:flex-row md:items-center items-start text-sm text-gray-100 ">
             {
                 nav_List.map((item,index)=>
                 {
                   const Icon=icons[index]
 
                     return (
-                        <button key={item+index} className="flex items-center  cursor-pointer relative " >
+                        <button key={item+index} className="flex items-center flex-col md:flex-row cursor-pointer relative " >
 
                         <Link href={`${item==='Home'?'/':item.trim().toLowerCase()}`} className="cursor-pointer ">
                             <span className='px-6 flex items-center hover-state'>

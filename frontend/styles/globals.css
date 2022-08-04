@@ -136,7 +136,16 @@ color: #f4fffdff;
     
 
 }
+@media (max-width:767px) {
+.mobile_nav{
+    position:absolute;
+    max-width: 639px;
+    top:2.5rem;
+    left:0;
+    right:0;
 
+}         
+}
 @media (min-width: 640px) { 
     .hero__WhatsNew{
         width:48%;
