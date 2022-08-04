@@ -10,11 +10,9 @@ import Link from 'next/link'
 
 const icons=[AiOutlineHome,HiNewspaper,RiAwardFill]
 const nav_List=["Home","WhatsNew", "Awards",]
-const Navbar = (props) => {
+const Navbar = () => {
 const [display, setDisplay]=useState(false)
- 
 const [show, setShow]=useContext(toggleContext)
-
   return (
     <>
     <div className=" pt-4 pb-20 md:pt-0 md:pb-0 flex flex-col bg-[#000000] w-full  md:flex-row md:items-center items-start  text-sm text-gray-100 ">
@@ -53,13 +51,10 @@ const [show, setShow]=useContext(toggleContext)
             <Link href="/publications" ><span className='link'onClick={()=>{setShow(!show)}}>Publications</span></Link>
       
             <Link href="/presentation"><a className='link' onClick={()=>{setShow(!show)}}>Selected Presentation</a></Link>
-        </div>
-
-          
+        </div> 
           )
         }
       
-
 <Link href="/research" className="cursor-pointer ">
     <span className='px-6 flex items-center hover-state'>
      <HiOutlineDocumentReport/>

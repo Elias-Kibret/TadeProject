@@ -45,11 +45,11 @@ const handleEvent=(abstract_title,abstract,link)=>{
         }
       
       
-        <div className='mx-auto w-[95%] lg:w-[80%] grid  gap-x-10 ]'>
+        <div className='mx-auto md:w-[95%] lg:w-[90%] grid  gap-x-10 ]'>
               {
                 props?.data.map((item, index)=>{
                   return(
-                    <div className='mt-12 mx-8'>
+                    <div className='mt-12 md:mx-8'>
 
 
 

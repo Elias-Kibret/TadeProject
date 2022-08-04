@@ -6,7 +6,7 @@ import SocialMediaIcons from '../../components/Icons/SocialMediaIcons'
 const Hero = () => {
   return (
 <main className="bg-[#000000] h-[650px]  mt-20 "  >
-<div className=' flex items-center justify-between '>
+<div className=' flex items-center justify-between flex-col-reverse md:flex-row'>
   <div className=' '>
     <div className='font-[Poppins] text-5xl font-extrabold '>
       <div className='inline-block title '>
