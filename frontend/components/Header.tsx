@@ -21,12 +21,12 @@ const Header = () => {
     <span className="text-gray-200  "><span className=" font-bold ">Tadesse </span>G. Wakjira</span>
     <div className='text-[#2Ecc71] md:hidden' onClick={()=>{setShow(!show)}}>
          {
-          show?<HiOutlineX size={28}/>:<HiMenu size={36}/>
+          show?<HiOutlineX size={36}/>:<HiMenu size={36}/>
          }
     </div>
       </div>
 
-      <div className={" mobile_nav "+ " md-flex "+ (show?"block":"hidden")}>  
+      <div className={" mobile_nav "+ " md-flex "+ "md:block " + (show?"block":"hidden")}>  
          <Navbar/>
       </div>
       {/* mobile version nav */}

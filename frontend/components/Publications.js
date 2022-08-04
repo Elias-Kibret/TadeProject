@@ -30,7 +30,7 @@ const handleEvent=(abstract_title,abstract,link)=>{
         {
           !showModal&&(  <div className=" bg-[black] absolute top-0 left-0 w-[100%]  h-[100%] flex">
           <Modal Abstract={abstract} Abstract_Title={abstract_title}/>
-           <div className=' fixed right-36 top-32'>
+           <div className=' fixed  right-2 sm:right-12 md:right-36 top-16 md:top-32'>
            <IconContext.Provider
               value={{ color: 'white', size: '50px' }}
             >
