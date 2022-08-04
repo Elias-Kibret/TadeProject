@@ -80,7 +80,9 @@ color: #f4fffdff;
 }
 .research{
     position: absolute;
-    padding:130px 20px 20px 20px;
+    /* padding:130px 20px 20px 20px; */
+    top:1.6rem;
+    left:2rem;
     margin-left: 40px;
     text-align: left;
 }
@@ -139,7 +141,7 @@ color: #f4fffdff;
 @media (max-width:767px) {
 .mobile_nav{
     position:absolute;
-    max-width: 639px;
+    width: 639px;
     top:2.5rem;
     left:0;
     right:0;

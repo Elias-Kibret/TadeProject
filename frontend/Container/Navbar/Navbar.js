@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState ,useContext} from 'react'
+import { toggleContext } from '../../components/Header';
+import { ToggleNavBar } from "../../components/contexts/HeaderContext";
 import {AiOutlineHome} from 'react-icons/ai'
 import {RiAwardFill} from 'react-icons/ri'
 import {HiOutlineDocumentReport,HiNewspaper} from 'react-icons/hi'
@@ -8,18 +10,21 @@ import Link from 'next/link'
 
 const icons=[AiOutlineHome,HiNewspaper,RiAwardFill]
 const nav_List=["Home","WhatsNew", "Awards",]
-const Navbar = () => {
-const [display, setDisplay]=React.useState<boolean>(false)
+const Navbar = (props) => {
+const [display, setDisplay]=useState(false)
+ 
+const [show, setShow]=useContext(toggleContext)
+
   return (
     <>
-    <div className=" flex flex-col bg-[#000000] w-full  md:flex-row md:items-center items-start text-sm text-gray-100 ">
+    <div className=" pt-4 pb-20 md:pt-0 md:pb-0 flex flex-col bg-[#000000] w-full  md:flex-row md:items-center items-start  text-sm text-gray-100 ">
             {
                 nav_List.map((item,index)=>
                 {
                   const Icon=icons[index]
 
                     return (
-                        <button key={item+index} className="flex items-center flex-col md:flex-row cursor-pointer relative " >
+                        <button key={item+index} className="flex items-center flex-col md:flex-row cursor-pointer relative " onClick={()=>{setShow(!show)}}  >
 
                         <Link href={`${item==='Home'?'/':item.trim().toLowerCase()}`} className="cursor-pointer ">
                             <span className='px-6 flex items-center hover-state'>
@@ -45,9 +50,9 @@ const [display, setDisplay]=React.useState<boolean>(false)
             onMouseEnter={()=>{setDisplay(true)}}
             onMouseLeave={()=>{setDisplay(false)}}
             >
-            <Link href="/publications" ><span className='link'>Publications</span></Link>
+            <Link href="/publications" ><span className='link'onClick={()=>{setShow(!show)}}>Publications</span></Link>
       
-            <Link href="/presentation"><a className='link'>Selected Presentation</a></Link>
+            <Link href="/presentation"><a className='link' onClick={()=>{setShow(!show)}}>Selected Presentation</a></Link>
         </div>
 
           
