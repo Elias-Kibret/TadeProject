@@ -40,7 +40,7 @@ return(
 </Slider>
 </div>
 
-                <div className='mx-4 h-[10rem]'>
+                <div className='mx-4 px-4 h-[10rem]'>
                 <span className='block my-4 text-[#2ECC71]'>{item.date}</span>
                 <p className='mt-4  text-[#FFFFFF] leading-6 text-justify font-light text-sm'>
                   

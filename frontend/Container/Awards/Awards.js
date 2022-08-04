@@ -16,14 +16,14 @@ const Awards = (props) => {
    
     
       }
-      // console.log(props.data)
+      
 
   return (
     <div className='xs:grid-cols-2 lg:grid-cols-3 place-items-center over gap-x-12 gap-y-10  overflow-hidden  grid grid-cols-1'>
       
     {
       props.data?.map((item,index)=>{
-        // console.log(props.data[index])
+      
         return(
           <div className=' bg-[#141B17]  rounded-xl w-[350px] pb-12 overflow-hidden' key={item+index}>
             <div className=' h-[17rem] overflow-hiiden object-cover'>
@@ -33,7 +33,7 @@ const Awards = (props) => {
                     
                     return(
                       
-                        // <img className=" w-full h-[350px] object-cover  overflow-hidden" />
+                      
                       
                         <div key={img.asset?._ref} className='object-cover h-[16rem]'>
                           {
