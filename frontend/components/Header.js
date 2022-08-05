@@ -1,5 +1,4 @@
-import {createContext,useContext } from "react"
-import {AppContext} from "./Layout"
+import {createContext,useContext,useState } from "react"
 import Head from "next/head"
 import React from "react"
 import Navbar from "../Container/Navbar/Navbar"
@@ -8,7 +7,7 @@ import Image from "next/image"
 import {HiOutlineX,HiMenu} from 'react-icons/hi'
 import {IoIosArrowDroprightCircle} from 'react-icons/io'
 import Publications from "./Publications"
-import { useState } from "react"
+import Contact from "../Container/Home/Contact"
 
 
 export const toggleContext=createContext()
@@ -16,9 +15,7 @@ export const toggleContext=createContext()
 
 const Header = () => {
   const [show, setShow]=useState(false);
-  const [contactRef]=useContext(AppContext)
-  console.log(contactRef)
-
+  const [showContactForm ,setShowContactForm]=useState(false)
   return (
     <toggleContext.Provider value={[show,setShow]}>
       <header className=" bg-[black] fixed w-full top-0 left-0  right-0 z-10 text-xl px-4 sm:px-10  py-3 sm:py-5 text-gray- font-poppins ">
@@ -42,11 +39,20 @@ const Header = () => {
             </div>
               <div  className="bg-[#2ECC71] text-[#FFFFFF] hidden md:block hover-state text-sm border-black  px-7 py-2  rounded-full hover:bg-[black]  hover:text-[#2ECC71] hover: border hover:border-[#2ECC71] ">
               <button onClick={()=>{
-                contactRef.current?.scrollIntoView({behavior: 'smooth'});
+                setShowContactForm(!showContactForm)
+
               }} >
                     <a className="flex items-center"> Contact</a>
                 </button>
+             
+                
               </div>
+              {
+                showContactForm&&(<div className="absolute bg-[black] right-0  top-10 left-0  pt-10 pb-60 -mr-3 ">
+                <Contact/>
+              </div>)
+              }
+            
           </div> 
       </header>
     </toggleContext.Provider>

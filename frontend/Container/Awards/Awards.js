@@ -57,10 +57,10 @@ const Awards = (props) => {
 
             </div>
 
-          <div className='mt-4 md:mx-10 lg:mx-4  px-12 lg:px-4 h-[15rem]'>
+          <div className='mt-4 md:mx-10 lg:mx-4  px-11 lg:px-4 h-[15rem]'>
           
           <h2 className='text-xl text-gray-200 font-semibold h-[5rem]'>{item.Title}</h2>
-          <p className='my-5 text-sm text-[#FFFFFF] leading-6 text-justify font-light h-[5.5rem]'>
+          <p className='my-5 text-sm text-[#FFFFFF] leading-6 text-justify font-light h-[6.6rem]'>
               
      {item.decription.substring(0,150) }
      {item.decription.length>150&&(<span className='font-bold ml-2'>   . . .</span>)}

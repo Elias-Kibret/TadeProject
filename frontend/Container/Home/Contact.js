@@ -1,12 +1,10 @@
 import { useContext } from 'react';
-import { AppContext } from '../../components/Layout';
 import {FaMinus} from 'react-icons/fa'
 import React from 'react'
 import {useForm,SubmitHandler} from 'react-hook-form'
 
 
 const Contact = () => {
-  const [contactRef]=useContext(AppContext)
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit =(data) => {
   
@@ -21,7 +19,7 @@ const Contact = () => {
     })
   }
   return (
-    <div className="px-6 mx-auto md:px-24 over" ref={contactRef}>
+    <div className="px-6 mx-auto md:px-24 over" >
         <div>
         <h2 className="text-[#A9A9A9] text-xl flex items-center font-bold"><span className=" text-[#A9A9A9] px-2 "><FaMinus /></span> Contact</h2>
             <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold">Contact Me</h2>    
@@ -32,15 +30,15 @@ const Contact = () => {
             <div className="flex flex-col">
             <input 
             {...register("name",{required:true})}
-            type="text" id="input-name" placeholder="Name" className=" pl-10 pr-36 rounded-lg py-5"/>
+            type="text" id="input-name" placeholder="Name" className=" pl-10 pr-36 rounded-lg py-2 sm:py-5"/>
 
 
           <input
             {...register("email",{required:true})}
-            type="email" id="input-email" placeholder="Email" className="my-10 pl-10 pr-36 rounded-lg py-5"/>
+            type="email" id="input-email" placeholder="Email" className="my-10 pl-10 pr-36 rounded-lg py-2 sm:py-5"/>
             <input
             {...register('subject',{required:true})}
-            type="text" id="inpu-email" placeholder="SubJect" className="pl-10 mb-7 pr-36 rounded-lg py-5"/>  
+            type="text" id="inpu-email" placeholder="SubJect" className="pl-10 mb-7 pr-36 rounded-lg py-2 sm:py-5"/>  
             </div>
             <div className="flex flex-col">
             <textarea 

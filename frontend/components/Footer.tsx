@@ -13,10 +13,10 @@ const Footer = () => {
          <p className="py-1">&copy; by Tadesse Wakjira</p>
         </div>
         <div className=" grid grid-cols-2 gap-x-8 sm:flex sm:flex-col">
-           <Link href="" ><a className="py-1">Home</a></Link>
-           <Link href=""><a className="py-1">What's New</a></Link>
-           <Link href=""><a className="py-1">Research</a></Link>
-           <Link href=""><a className="py-1">Awards</a></Link>
+           <Link href="/" ><a className="py-1">Home</a></Link>
+           <Link href="/whatsnew"><a className="py-1">What's New</a></Link>
+           <Link href="/research"><a className="py-1">Research</a></Link>
+           <Link href="/awards"><a className="py-1">Awards</a></Link>
         </div>
         </div>
     </div>

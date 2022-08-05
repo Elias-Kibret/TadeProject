@@ -21,7 +21,7 @@ const List = () => {
   // console.log(  selectedPublication)
   console.log(selectedPresentations)
   return (
-<div className="mt-8  items-center justify-between px-10">
+<div className="mt-8  items-center justify-between px-3">
    <div className='mt-10 '>
     <h3 className="text-[#FFFFFF] text-3xl  ">Selected Publications </h3>
    </div>
@@ -34,13 +34,10 @@ const List = () => {
         
     </div>
    </div>
-   <div className="flex mt-8  items-center justify-between">
-     <div><h3 className="text-[#FFFFFF] text-3xl  ">Publications and presentations</h3></div>
-     
-  </div>
+   
    <div>
    <div className='my-22'>
-    <h3 className="text-[#FFFFFF] text-3xl ">Selected presentations</h3>
+    <h3 className="text-[#FFFFFF] text-2xl md:text-3xl ">Selected presentations</h3>
    </div>
    <Rows data={selectedPresentations}/>
    </div>
