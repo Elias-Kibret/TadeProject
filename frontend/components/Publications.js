@@ -45,7 +45,7 @@ const handleEvent=(abstract_title,abstract,link)=>{
         }
       
       
-        <div className='mx-auto md:w-[95%] lg:w-[90%] grid  gap-x-10 ]'>
+        <div className='px-4 mx-auto md:w-[95%] lg:w-[90%] grid  gap-x-10 ]'>
               {
                 props?.data.map((item, index)=>{
                   return(

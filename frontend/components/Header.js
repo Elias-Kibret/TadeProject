@@ -1,12 +1,10 @@
-import { useContext, createContext } from "react"
-import { ToggleNavBar } from "./contexts/HeaderContext";
+import {createContext } from "react"
 import Head from "next/head"
 import React from "react"
 import Navbar from "../Container/Navbar/Navbar"
 import Link from "next/link"
 import Image from "next/image"
 import {HiOutlineX,HiMenu} from 'react-icons/hi'
-import HeaderContextProvider from './contexts/HeaderContext'
 import {IoIosArrowDroprightCircle} from 'react-icons/io'
 import Publications from "./Publications"
 import { useState } from "react"
@@ -16,8 +14,7 @@ export const toggleContext=createContext()
 
 const Header = () => {
   const [show, setShow]=useState(false);
-  
-  console.log(show)
+
   return (
     <toggleContext.Provider value={[show,setShow]}>
       <header className=" bg-[black] fixed w-full top-0 left-0  right-0 z-10 text-xl px-4 sm:px-10  py-3 sm:py-5 text-gray- font-poppins ">

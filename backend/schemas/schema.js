@@ -13,6 +13,7 @@ import SelectedPresentations from './SelectedPresentations'
 import selectedPublications from './selectedPublications'
 import Presentations from './Presentations'
 import publications from './publications'
+import Contact from './Contact'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -31,6 +32,8 @@ export default createSchema({
     selectedPublications,
     SelectedPresentations,
     Presentations,
-    publications
+    publications,
+    Contact
+  
   ]),
 })

@@ -19,7 +19,7 @@ const persentaions = () => {
                <div>
                 <div className="flex mt-8  items-center justify-between">
                 <div>
-                  <h2 className="text-[#A9A9A9] text-xl flex items-center font-bold"><span className=" text-[#A9A9A9] px-2 "><FaMinus /></span> Awards</h2>
+                  <h2 className="text-[#A9A9A9] text-xl flex items-center font-bold"><span className=" text-[#A9A9A9] px-2 "><FaMinus /></span> Research</h2>
                       <h2 className="text-[#FFFFFF] text-2xl  mx-4 md:text-3xl mt-8  font-[poppins] font-bold">Publications and presentations</h2>    
                   </div>
               
@@ -29,7 +29,8 @@ const persentaions = () => {
 
                <Publications data={publications}/>
                <div className='flex justify-center items-center my-28 hover-state '>
-      <button className='px-8 py-4 text-[#FFFFFF] bg-[#2ECC71] rounded-lg' >View All</button>
+                
+      <button className='px-8 py-4 text-[#FFFFFF] bg-[#2ECC71] rounded-lg' ><Link href="/publications">View All</Link></button>
       </div>
     </div>
   )

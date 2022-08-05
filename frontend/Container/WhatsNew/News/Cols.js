@@ -1,9 +1,12 @@
 import Image from 'next/image'
 import { urlFor } from '../../../client'
+import { useRouter } from 'next/router'
 import Slider from 'react-slick'
 import Link from 'next/link'
 import Button from '../../Home/Hero/Button'
 const Cols = (props) => {
+  const router = useRouter()
+  console.log(router.pathname)
   const settings = {
     dots: true,
     infinite: true,
@@ -47,9 +50,14 @@ return(
            {item.decription}
                   </p>
                 </div>
-                <div className='my-4 mx-5'>
-                <Link href={'/whatsnew/'+item._id} ><a className="text-[blue] my-4">See more</a></Link>
-                </div>
+                {
+                  router.pathname==='/whatsnew'&&(
+                    <div className='my-4 mx-5'>
+                    <Link href={'/whatsnew/'+item._id} ><a className="text-[blue] my-4">See more</a></Link>
+                    </div>
+                  )
+                }
+                
               
               </div>  
               )
