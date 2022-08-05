@@ -12,7 +12,7 @@ const Awards = () => {
      })
   },[])
   return (
-    <div className='px-8 md:px-24 mt-40'>
+    <div className='px-8 md:px-24 '>
         <div>
         <h2 className="text-[#A9A9A9] text-xl flex items-center font-bold"><span className=" text-[#A9A9A9] px-2 "><FaMinus /></span> Awards</h2>
             <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold">Selected Awards and Recognitions</h2>    

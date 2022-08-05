@@ -38,8 +38,14 @@ const [show, setShow]=useContext(toggleContext)
             }
             
       <div  className="flex items-center  cursor-pointer relative " 
-      onMouseEnter={()=>{setDisplay(true)}}
-      onMouseLeave={()=>{setDisplay(false)}}
+      onMouseEnter={()=>{
+        
+        setDisplay(true)}}
+      onMouseLeave={()=>{
+        setTimeout(()=>{
+          setDisplay(false)
+        },2000)
+      }}
       >
         {
           display&&(

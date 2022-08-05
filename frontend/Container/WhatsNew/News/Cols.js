@@ -17,13 +17,13 @@ const Cols = (props) => {
     cssEase: "linear", 
   }
   return (
-    <div className='xs:grid-cols-2 lg:grid-cols-3 place-items-center over gap-x-16 gap-y-10  overflow-hidden  grid grid-cols-1'>
+    <div className='sm:grid-cols-2  lg:grid-cols-3 place-items-center over gap-x-16 gap-y-10  overflow-hidden  grid grid-cols-1'>
       
           {
             props.data?.map((item,index)=>{
               
               return(
-                <div className=' bg-[#141B17] overflow-hidden rounded-xl  w-[350px]' key={item+index}>
+                <div className=' bg-[#141B17] overflow-hidden rounded-xl xs:w-[300px] md:w-[350px]' key={item+index}>
                 <div className=''>
 
                
@@ -43,7 +43,7 @@ return(
 </Slider>
 </div>
 
-                <div className='mx-4 px-4 h-[10rem]'>
+                <div className='mx-4 px-10 lg:px-4 h-[11rem]'>
                 <span className='block my-4 text-[#2ECC71]'>{item.date}</span>
                 <p className='mt-4  text-[#FFFFFF] leading-6 text-justify font-light text-sm'>
                   

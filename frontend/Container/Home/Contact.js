@@ -40,12 +40,12 @@ const Contact = () => {
             type="email" id="input-email" placeholder="Email" className="my-10 pl-10 pr-36 rounded-lg py-5"/>
             <input
             {...register('subject',{required:true})}
-            type="text" id="inpu-email" placeholder="SubJect" className="pl-10 pr-36 rounded-lg py-5"/>  
+            type="text" id="inpu-email" placeholder="SubJect" className="pl-10 mb-7 pr-36 rounded-lg py-5"/>  
             </div>
             <div className="flex flex-col">
             <textarea 
               {...register("text",{required:true})}
-              id="input-Message" placeholder="Message" className="  pl-10  pb-32 rounded-lg " />
+              id="input-Message" placeholder="Message" className="  pl-10 pt-4 pb-28 rounded-lg " />
               <input type="submit"  className="bg-[#2ECC71]  flex justify-center text-black text-lg my-10 font-semibold rounded-lg py-5 hover:bg-[#28a65c] hover:border-2 hover:border-[#2ECC71] "/> 
             </div>
           
