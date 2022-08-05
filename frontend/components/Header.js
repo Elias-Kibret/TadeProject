@@ -1,4 +1,5 @@
-import {createContext } from "react"
+import {createContext,useContext } from "react"
+import {AppContext} from "./Layout"
 import Head from "next/head"
 import React from "react"
 import Navbar from "../Container/Navbar/Navbar"
@@ -12,8 +13,11 @@ import { useState } from "react"
 
 export const toggleContext=createContext()
 
+
 const Header = () => {
   const [show, setShow]=useState(false);
+  const [contactRef]=useContext(AppContext)
+  console.log(contactRef)
 
   return (
     <toggleContext.Provider value={[show,setShow]}>
@@ -37,9 +41,11 @@ const Header = () => {
               
             </div>
               <div  className="bg-[#2ECC71] text-[#FFFFFF] hidden md:block hover-state text-sm border-black  px-7 py-2  rounded-full hover:bg-[black]  hover:text-[#2ECC71] hover: border hover:border-[#2ECC71] ">
-              <Link href=""  >
+              <button onClick={()=>{
+                contactRef.current?.scrollIntoView({behavior: 'smooth'});
+              }} >
                     <a className="flex items-center"> Contact</a>
-                </Link>
+                </button>
               </div>
           </div> 
       </header>

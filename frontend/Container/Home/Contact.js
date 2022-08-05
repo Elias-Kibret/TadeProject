@@ -1,17 +1,14 @@
+import { useContext } from 'react';
+import { AppContext } from '../../components/Layout';
 import {FaMinus} from 'react-icons/fa'
 import React from 'react'
 import {useForm,SubmitHandler} from 'react-hook-form'
-type Inputs = {
-  _id:string,
-  name: string,
-  email: string,
-  text:string,
-  subject:string
-};
+
 
 const Contact = () => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
-  const onSubmit :SubmitHandler<Inputs>=(data) => {
+  const [contactRef]=useContext(AppContext)
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const onSubmit =(data) => {
   
    fetch('api/contact',
     {
@@ -24,7 +21,7 @@ const Contact = () => {
     })
   }
   return (
-    <div className="px-6 mx-auto md:px-24 over">
+    <div className="px-6 mx-auto md:px-24 over" ref={contactRef}>
         <div>
         <h2 className="text-[#A9A9A9] text-xl flex items-center font-bold"><span className=" text-[#A9A9A9] px-2 "><FaMinus /></span> Contact</h2>
             <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold">Contact Me</h2>    
