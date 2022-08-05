@@ -30,20 +30,20 @@ const Contact = () => {
             <div className="flex flex-col">
             <input 
             {...register("name",{required:true})}
-            type="text" id="input-name" placeholder="Name" className=" pl-10 pr-36 rounded-lg py-2 sm:py-5"/>
+            type="text" id="input-name" placeholder="Name" className=" pl-5 pr-6 mb-7  rounded-lg py-2 sm:py-4"/>
 
 
           <input
             {...register("email",{required:true})}
-            type="email" id="input-email" placeholder="Email" className="my-10 pl-10 pr-36 rounded-lg py-2 sm:py-5"/>
+            type="email" id="input-email" placeholder="Email" className="pl-5 pr-6 mb-7  rounded-lg py-2 sm:py-4"/>
             <input
             {...register('subject',{required:true})}
-            type="text" id="inpu-email" placeholder="SubJect" className="pl-10 mb-7 pr-36 rounded-lg py-2 sm:py-5"/>  
+            type="text" id="inpu-email" placeholder="SubJect" className="pl-5 pr-6 mb-7  rounded-lg py-2 sm:py-4"/>  
             </div>
             <div className="flex flex-col">
             <textarea 
               {...register("text",{required:true})}
-              id="input-Message" placeholder="Message" className="  pl-10 pt-4 pb-28 rounded-lg " />
+              id="input-Message" placeholder="Message" className=" w-full pl-10 pt-4 pb-20 rounded-lg " />
               <input type="submit"  className="bg-[#2ECC71]  flex justify-center text-black text-lg my-10 font-semibold rounded-lg py-5 hover:bg-[#28a65c] hover:border-2 hover:border-[#2ECC71] "/> 
             </div>
           
