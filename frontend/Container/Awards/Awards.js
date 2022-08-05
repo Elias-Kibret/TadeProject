@@ -1,10 +1,12 @@
 import React,{useEffect,useState} from 'react'
 import Slider from "react-slick";
+import { useRouter } from 'next/router'
 import { client,urlFor } from '../../client';
 import Image from 'next/image'
+import Link from 'next/link';
 const Awards = (props) => {
 
-    
+  const router = useRouter()
     const settings = {
         dots: true,
         infinite: true,
@@ -25,7 +27,7 @@ const Awards = (props) => {
       props.data?.map((item,index)=>{
       
         return(
-          <div className=' bg-[#141B17]  rounded-xl w-[350px] pb-12 overflow-hidden' key={item+index}>
+          <div className=' bg-[#141B17]  rounded-xl w-[350px]  overflow-hidden h-[37rem]' key={item+index}>
             <div className=' h-[17rem] overflow-hiiden object-cover'>
               <Slider {...settings} className=" overflow-hidden object-cover">
               {
@@ -55,15 +57,24 @@ const Awards = (props) => {
 
             </div>
 
-          <div className='mt-4 md:mx-10 lg:mx-4  px-12 lg:px-4 h-[17rem]'>
+          <div className='mt-4 md:mx-10 lg:mx-4  px-12 lg:px-4 h-[15rem]'>
           
-          <h2 className='text-xl text-gray-200 font-semibold'>{item.Title}</h2>
-          <p className='my-5 text-sm text-[#FFFFFF] leading-6 text-justify font-light'>
+          <h2 className='text-xl text-gray-200 font-semibold h-[5rem]'>{item.Title}</h2>
+          <p className='my-5 text-sm text-[#FFFFFF] leading-6 text-justify font-light h-[5.5rem]'>
               
-     {item.decription}
+     {item.decription.substring(0,150) }
+     {item.decription.length>150&&(<span className='font-bold ml-2'>   . . .</span>)}
+     
             </p>
-            <span className='block my-4 text-[#2ECC71]'>{item.date}</span>
+            <span className='block my-2 text-[#2ECC71]'>{item.date}</span>
           </div>
+          {
+            (router.pathname==='/awards'&&(item.decription.length>150))&&(
+              <div className='my-4 px-5'>
+              <Link href={'/awards/'+item._id} ><a className="text-[blue] my-4 px-4">See more</a></Link>
+              </div>
+            )
+          }
         </div>  
         )
       })
