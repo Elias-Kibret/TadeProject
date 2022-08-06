@@ -122,15 +122,15 @@ const handleEvent=(abstract_title,abstract,link)=>{
                               })
                             }
                           </div>
-                          <div className='md:w-[25%] object-cover mt-6 md:hidden'>
-                            <img src={urlFor(item.images.asset._ref)} width='120px' height='250px' className='object-cover'/>
+                          <div className='md:w-[10%] object-cover mt-6 md:hidden'>
+                            <img src={urlFor(item.images.asset._ref)} width='' height='250px' className='object-cover'/>
                           </div>
                         </div>
                         
       
   
                         </div>
-                        <div className='md:w-[25%] object-cover mt-6 hidden md:block '>
+                        <div className=' object-cover mt-6 hidden md:block '>
                             <img src={urlFor(item.images.asset._ref)} width='120px' height='250px' className='object-cover'/>
                           </div>
                         </div>

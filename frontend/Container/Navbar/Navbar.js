@@ -10,7 +10,7 @@ import Link from 'next/link'
 const icons=[AiOutlineHome,HiNewspaper,RiAwardFill]
 const nav_List=["Home","WhatsNew", "Awards",]
 const Navbar = () => {
-const [display, setDisplay]=useState(false)
+const [display, setDisplay]=useState(true)
 const [show, setShow]=useContext(toggleContext)
   return (
     <>
@@ -26,7 +26,7 @@ const [show, setShow]=useContext(toggleContext)
                         <Link href={`${item==='Home'?'/':item.trim().toLowerCase()}`} className="cursor-pointer ">
                             <span className='px-6 flex items-center hover-state'>
                             <Icon/>
-                            <a className="px-2 cursor-pointer">
+                            <a className="px-2 cursor-pointer hover:text-[#2cce71]">
                                       { item==='WhatsNew'?"What's New":item}</a>
                                       
 
@@ -42,20 +42,19 @@ const [show, setShow]=useContext(toggleContext)
         
         setDisplay(true)}}
       onMouseLeave={()=>{
-        setTimeout(()=>{
-          setDisplay(false)
-        },2000)
+        setDisplay(false)
       }}
       >
         {
           display&&(
-            <div className='research w-[200px] bg-[black]  flex flex-col'
+            <div className='research w-[200px] pb-6 bg-[#2cce71]  flex flex-col'
             onMouseEnter={()=>{setDisplay(true)}}
             onMouseLeave={()=>{setDisplay(false)}}
             >
-            <Link href="/publications" ><span className='link'onClick={()=>{setShow(!show)}}>Publications</span></Link>
-      
-            <Link href="/presentation"><a className='link' onClick={()=>{setShow(!show)}}>Selected Presentation</a></Link>
+            <Link href="/publications" ><span className='link hover:text-[#2cce71]'onClick={()=>{setShow(!show)}}>Research Interest</span></Link>
+            <Link href="/publications" ><span className='link hover:text-[#2cce71]'onClick={()=>{setShow(!show)}}>Publications</span></Link>
+            <Link href="/presentation"><a className='link hover:text-[#2cce71]' onClick={()=>{setShow(!show)}}>Selected Presentation</a></Link>
+            <Link href="/presentation"><a className='link hover:text-[#2cce71]' onClick={()=>{setShow(!show)}}>Call for Collabuation</a></Link>
         </div> 
           )
         }
@@ -63,7 +62,7 @@ const [show, setShow]=useContext(toggleContext)
 <Link href="/research" className="cursor-pointer ">
     <span className='px-6 flex items-center hover-state'>
      <HiOutlineDocumentReport/>
-    <a className="px-2 cursor-pointer">
+    <a className="px-2 cursor-pointer hover:text-[#2cce71]">
 
       Research
               </a>
