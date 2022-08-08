@@ -4,8 +4,8 @@ export default{
     type:'document',
     fields:[
         {
-            name:'date',
-            title:'Date',
+            name:'Title',
+            title:'Title',
             type:'string'
         },
         {

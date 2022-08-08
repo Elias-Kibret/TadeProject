@@ -28,7 +28,7 @@ const Cols = (props) => {
 
                
 <Slider {...settings} className=" overflow-hidden object-cover">
-{props.data[index]?.imagesGallery.map((images,index)=>{ 
+{props.data[index]?.imagesGallery?.map((images,index)=>{ 
 //  console.log(images.asset)
 console.log(item.decription.length)
 return(
