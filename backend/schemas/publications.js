@@ -63,7 +63,11 @@ export default{
             of:[{
                 type:'string'
             }]
+        },
+        {
+            name:ord
         }
+        
 
 
 
