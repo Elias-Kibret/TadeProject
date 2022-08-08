@@ -11,6 +11,7 @@ module.exports = {
     './Container/Research/**/*.{js,ts,jsx,tsx}',
     './Container/Publications/**/*.{js,ts,jsx,tsx}',
     './Container/Presentation/**/*.{js,ts,jsx,tsx}',
+    './Container/ResearchInterset/**/*.{js,ts,jsx,tsx}',
     
 
   ],

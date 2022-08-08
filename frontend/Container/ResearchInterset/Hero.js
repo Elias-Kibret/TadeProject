@@ -12,7 +12,7 @@ const Hero = () => {
 
 <div className='mx-8'>
 <div className='mt-32 flex w-full'>
-    <h1 className='text-[#FFFFFF] pt-5 title text-4xl'>What's <span className='text-[#2Ecc71]'>New</span> </h1> 
+    <h1 className='text-[#FFFFFF] pt-5 title text-4xl'>Research <span className='text-[#2Ecc71]'>Interest</span> </h1> 
   </div>
   <div className='hidden sm:flex' >
   <SocialMediaIcons/>
