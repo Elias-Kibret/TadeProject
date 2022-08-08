@@ -1,7 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import { client,urlFor } from '../../client'
 import {FaMinus} from 'react-icons/fa'
-import Cols from '../WhatsNew/News/Cols'
 import Slider from 'react-slick'
 const List = () => {
     const settings = {

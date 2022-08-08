@@ -1,6 +1,8 @@
 import React from 'react'
 import Hero from './Hero'
 import Descriptions from './Descriptions'
+import Notice from './Notice'
+import AreaOfContribution from './AreaOfContribution'
 import List from './List'
 const Index = () => {
   return (
@@ -8,6 +10,9 @@ const Index = () => {
         <Hero/>
         <Descriptions/>
         <List/>
+        <Notice/>
+        <AreaOfContribution/>
+        
     </div>
   )
 }

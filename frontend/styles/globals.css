@@ -69,6 +69,7 @@ color: #f4fffdff;
     background-repeat: none;
     background-size: cover;
     overflow: hidden;
+    /* background-color:aqua; */
 }
 .research-hero{
     background-image: url(../public/Img/HeroImages/Researchhero3.png);

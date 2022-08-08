@@ -5,15 +5,7 @@ import Cols from '../WhatsNew/News/Cols'
 import Slider from 'react-slick'
 import { motion } from 'framer-motion'
 const List = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay:true,
-        cssEase: "linear", 
-      }
+   
 const [organizer,setOrganizer]=useState([]) 
     useEffect(()=>{
        const query='*[_type=="Organizers"]'
@@ -22,7 +14,7 @@ const [organizer,setOrganizer]=useState([])
        })
     },[])
 
-    console.log(organizer, 'elias')
+    
   return (
     <div  className='px-8 md:pz-12 text-white'>
         <div className='my-32'>
@@ -51,7 +43,7 @@ const [organizer,setOrganizer]=useState([])
 >
 <img 
   src={urlFor(item?.images.asset?._ref)}   
-  className="object-cover overflow-hidden rounded-full border-2 border-gray-500 w-[180px] h-[170px] md:w-[250px] md:h-[250px]"/>
+  className="object-cover overflow-hidden rounded-full border-2 border-gray-500 w-[140px] h-[140px] md:w-[200px] md:h-[200px]"/>
 
 </motion.div> 
 
@@ -59,7 +51,7 @@ const [organizer,setOrganizer]=useState([])
 </div>
 
             <div className='mx-4 px-10 lg:px-4  '>
-            <span className='block my-4 text-[#2ECC71] text-xl'>{item.Name}</span>
+            <span className='block my-4 text-[#2ECC71] font-bold text-xl'>{item.Name}</span>
             <p className='mt-4  text-[#FFFFFF] leading-6 text-justify font-light text-sm'>
   
        {/* {item.description.substring(0,200)}
