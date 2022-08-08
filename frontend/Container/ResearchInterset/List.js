@@ -1,5 +1,6 @@
 import React from 'react'
 import {FaMinus} from 'react-icons/fa'
+import Row from '../WhatsNew/News/Rows'
 const List = () => {
   return (
     <div  className='px-8 md:px-24 text-white'>
@@ -7,6 +8,9 @@ const List = () => {
 
             <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' /> Research Interset</h2>    
         </div>  
+        <div>
+            <
+        </div>
     </div>
   )
 }
