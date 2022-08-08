@@ -3,6 +3,7 @@ import { client,urlFor } from '../../client'
 import {FaMinus} from 'react-icons/fa'
 import Cols from '../WhatsNew/News/Cols'
 import Slider from 'react-slick'
+import { motion } from 'framer-motion'
 const List = () => {
     const settings = {
         dots: true,
@@ -21,10 +22,10 @@ const [organizer,setOrganizer]=useState([])
        })
     },[])
 
-    console.log(organizer)
+    console.log(organizer, 'elias')
   return (
-    <div  className='px-8 md:px-24 text-white'>
-        {/* <div className='my-32'>
+    <div  className='px-8 md:pz-12 text-white'>
+        <div className='my-32'>
 
             <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' />Organizers</h2>    
         </div>  
@@ -34,31 +35,31 @@ const [organizer,setOrganizer]=useState([])
         <div className='sm:grid-cols-2  lg:grid-cols-3 place-items-center over gap-x-16 gap-y-10  overflow-hidden  grid grid-cols-1'>
       
       {
-        researchInterest.map((item,index)=>{
+        organizer.map((item,index)=>{
        
           return(
-            <div className=' bg-[#141B17] hover-state overflow-hidden overflow-hidden rounded-xl xs:w-[300px] md:w-[350px] h-[25.5rem]' key={item+index}>
+            <div className='  overflow-hidden overflow-hidden rounded-xl ' key={item+index}>
             <div className=''>
 
 
 
-{researchInterest[index].imagesGallery?.map((images,index)=>{
 
-return(
-
-<div key={images.asset?._ref} className='object-cover h-[15rem] '>
+<motion.div key={item.images.asset?._ref} className='object-cover  rounded-full flex items-center justify-center'
+     initial={{scale:.5}}
+     animate={{scale:1}}
+     transition={{delay:.5, stiffness:100}}
+>
 <img 
-  src={urlFor(images.asset?._ref)} width='450px' height='250px' 
-  className="object-cover overflow-hidden "/>
+  src={urlFor(item?.images.asset?._ref)}   
+  className="object-cover overflow-hidden rounded-full border-2 border-gray-500 w-[180px] h-[170px] md:w-[250px] md:h-[250px]"/>
 
-</div> 
-)})
-}
+</motion.div> 
+
 
 </div>
 
-            <div className='mx-4 px-10 lg:px-4 h-[11rem]'>
-            <span className='block my-4 text-[#2ECC71]'>{item.Name}</span>
+            <div className='mx-4 px-10 lg:px-4  '>
+            <span className='block my-4 text-[#2ECC71] text-xl'>{item.Name}</span>
             <p className='mt-4  text-[#FFFFFF] leading-6 text-justify font-light text-sm'>
   
        {/* {item.description.substring(0,200)}
@@ -74,7 +75,7 @@ return(
       }
 
 </div>
-        </div> */}
+        </div>
         
     </div>
   )
