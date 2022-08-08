@@ -54,7 +54,7 @@ const [show, setShow]=useContext(toggleContext)
             <Link href="/researchInterest" ><span className='link hover:text-[#2cce71]'onClick={()=>{setShow(!show)}}>Research Interest</span></Link>
             <Link href="/publications" ><span className='link hover:text-[#2cce71]'onClick={()=>{setShow(!show)}}>Publications</span></Link>
             <Link href="/presentation"><a className='link hover:text-[#2cce71]' onClick={()=>{setShow(!show)}}>Selected Presentation</a></Link>
-            <Link href="/presentation"><a className='link hover:text-[#2cce71]' onClick={()=>{setShow(!show)}}>Call for Collabuation</a></Link>
+            <Link href="/collaboration"><a className='link hover:text-[#2cce71]' onClick={()=>{setShow(!show)}}>Call for Collabuation</a></Link>
         </div> 
           )
         }

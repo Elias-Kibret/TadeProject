@@ -2,7 +2,6 @@ import React,{useEffect,useState} from 'react'
 import { client,urlFor } from '../../client'
 import {FaMinus} from 'react-icons/fa'
 import Cols from '../WhatsNew/News/Cols'
-
 import Slider from 'react-slick'
 const List = () => {
     const settings = {
@@ -14,16 +13,18 @@ const List = () => {
         autoplay:true,
         cssEase: "linear", 
       }
-    const [researchInterest,setResearchInterest]=useState([]) 
+const [researchInterest,setResearchInterest]=useState([]) 
     useEffect(()=>{
-       const query='*[_type=="Awards"]'
+       const query='*[_type=="ResearchInterest"]'
        client.fetch(query).then((data)=>{
         setResearchInterest(data)
        })
     },[])
+
+    console.log(researchInterest)
   return (
     <div  className='px-8 md:px-24 text-white'>
-           <div className='my-32'>
+        <div className='my-32'>
 
             <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' /> Research Interset</h2>    
         </div>  
@@ -34,16 +35,15 @@ const List = () => {
       
       {
         researchInterest.map((item,index)=>{
-
+       
           return(
-            <div className=' bg-[#141B17] overflow-hidden rounded-xl xs:w-[300px] md:w-[350px] h-[31.5rem]' key={item+index}>
+            <div className=' bg-[#141B17] hover-state overflow-hidden overflow-hidden rounded-xl xs:w-[300px] md:w-[350px] h-[25.5rem]' key={item+index}>
             <div className=''>
 
 
 <Slider {...settings} className=" overflow-hidden object-cover">
-{researchInterest[index].imagesGallery?.map((images,index)=>{ 
-//  console.log(images.asset)
-console.log(item.decription.length)
+{researchInterest[index].imagesGallery?.map((images,index)=>{
+
 return(
 
 <div key={images.asset?._ref} className='object-cover h-[15rem] '>
@@ -61,8 +61,8 @@ return(
             <span className='block my-4 text-[#2ECC71]'>{item.Title}</span>
             <p className='mt-4  text-[#FFFFFF] leading-6 text-justify font-light text-sm'>
   
-       {item.decription.substring(0,200)}
-       {item.decription.length>200&&(<span className='font-bold ml-2'>   . . .</span>)}
+       {/* {item.description.substring(0,200)}
+       {item.description.length>200&&(<span className='font-bold ml-2'>   . . .</span>)} */}
               </p>
             </div>
 
@@ -72,9 +72,6 @@ return(
           )
         })
       }
-
-
-  
 
 </div>
         </div>

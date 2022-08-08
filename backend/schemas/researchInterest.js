@@ -19,13 +19,8 @@ export default{
             }
         },
         {
-            name:'decription',
-            title:'Decription',
-            type:'string'
-        },
-        {
-            name:'link',
-            title:'Link',
+            name:'description',
+            title:'Description',
             type:'string'
         }
 
