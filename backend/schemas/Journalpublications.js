@@ -1,6 +1,6 @@
 export default{
-    name:'Publications',
-    title:'Publications',
+    name:'Journalpublications',
+    title:'Journalpublications',
     type:'document',
     fields:[
         {
@@ -65,7 +65,9 @@ export default{
             }]
         },
         {
-            name:ord
+            name:'Order',
+            title:'Order',
+            type:'number'
         }
         
 

@@ -12,7 +12,8 @@ import Awards from './Awards'
 import SelectedPresentations from './SelectedPresentations'
 import selectedPublications from './selectedPublications'
 import Presentations from './Presentations'
-import publications from './publications'
+import Journalpublications from './Journalpublications'
+import ConferencePublications from './ConferencePublications'
 import Contact from './Contact'
 import researchInterest from './researchInterest'
 import Organizers from './Organizers'
@@ -35,11 +36,12 @@ export default createSchema({
     selectedPublications,
     SelectedPresentations,
     Presentations,
-    publications,
     Contact,
     researchInterest,
     Organizers,
-    AreaOfContributions
+    AreaOfContributions,
+    Journalpublications,
+    ConferencePublications
   
   ]),
 })
