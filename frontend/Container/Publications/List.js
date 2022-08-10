@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useLayoutEffect} from 'react'
 import Publication from '../../components/Publications'
 import { client } from '../../client'
 import {BiCaretDown} from 'react-icons/bi'
@@ -9,68 +9,99 @@ const List = () => {
     const [display, setDisplay]=useState(false)
     const [displayJournal, setDisplayJournal]=useState([true])
     const [displayConfernace, setDisplayConference]=useState([true])
-    const [publications,setPublications]=useState([])
-    const [Journalpublications,SetJournalPublicatiopns]=useState([]) 
-    const [conferencePublications,SetConferencePublications]=useState([])
+    const [filteredJournal,setFilteredJournal]=useState([])
+    const [filteredConfernce,setFilteredConference]=useState([])
+    const [conference ,setConference]=useState([])
+    const [Journal,setJournal]=useState([])
+    const [type, setType]=useState('')
+    
+  
     
 
     const [filtered_publication, setFiltered_publication]=useState([])
     const year=[2022,2021,2020,2019,2018]
   
-    useEffect(()=>{
+    useLayoutEffect(()=>{
        const journal='*[_type=="Journalpublications"]'
        const conference='*[_type=="ConferencePublications"]'
        client.fetch(journal).then((data)=>{
-        setPublications(data)
-        SetJournalPublicatiopns(data)
+        setJournal(data)
+        setFilteredJournal(data)
+        
        })
        client.fetch(conference).then((data)=>{
-        setPublications(data)
-        SetConferencePublications(data)
+        setConference(data)
+        setFilteredConference(data)
+     
        })
+    
+    
+        
     },[])
      
    const filter=(year)=>{
-       console.log(year)
-       setFiltered_publication(publication.filter((item,index)=>{
-        if(year=="All"){
-          return publication
-        }
-        else{
-          return item.Year==year
-        }
+       
+        setFilteredJournal(Journal.filter((item,index)=>{
+          if(year=="All"){
+            return Journal
+          }
+          else{
+            return item.Year==year
+          }
         
-      }))
-    
-   }
+        }))
+       
+       
+      
+        setFilteredConference(conference.filter((item,index)=>{
+          if(year=="All"){
+            return conference
+          }
+          else{
+            return item.Year==year
+          }
+      
+        }))
+  
+     
+       }
+      
    const Toggle=(type)=>{
        if(type==='Both')
        {
+        setType(type)
         setDisplayConference(true)
         setDisplayJournal(true)
+      
        }
        else if(type==='Journal')
        {
+        setType(type)
         setDisplayJournal(true)
         setDisplayConference(false)
+        
        }
         else if(type==="Conference")
        {
+        setType(type)
         setDisplayConference(true)
         setDisplayJournal(false)
+        
        }
        else{
+        setType('Type')
         setDisplayConference(true)
-        setDisplayPublications(true)
+        setDisplayJournal(true)
+       
        }
    }
-  console.log(filtered_publication)
+  
 
   return (
     <div>
         <div>
         <div className="flex md: my-16  w-full justify-center  items-center flex-col sm:flex-row">
-               <div><h3 className="text-[#FFFFFF] text-3xl  "><span className='text-[#2ecc71] font-semibold text-4xl '> {filtered_publication.length} </span> Publications </h3></div>
+               <div><h3 className="text-[#FFFFFF] text-3xl  "><span className='text-[#2ecc71] font-semibold text-4xl '> {filteredConfernce.length+filteredJournal.length}</span> Publications </h3></div>
                <div className="flex items-center flex-col md:flex-row justify-between   text-[#FFFFFF] sm:mx-14">
                 <div className="px-4 py-2 mr-6 font-semibold ">Filter by </div>
                 
@@ -110,12 +141,12 @@ const List = () => {
 {
   displayJournal&&(
     <div>
-      <div className='my-32'>
+      <div className='my-28 mx-24'>
 
       <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' />Peer-Reviewed Journal Publications
       </h2>    
       </div>
-      <Publication data={Journalpublications}/>
+      <Publication data={filteredJournal}/>
     </div>
   )
 }
@@ -125,13 +156,13 @@ const List = () => {
 {
   displayConfernace&&(
   <div>
-    <div className='my-32'>
+    <div className='my-32 mx-24'>
 
 <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' />Conference Publications (Scopus indexed)
 
 </h2>    
 </div>
-    <Publication data={conferencePublications}/>
+    <Publication data={filteredConfernce}/>
   </div>
    )
 }
