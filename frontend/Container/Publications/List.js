@@ -2,19 +2,29 @@ import React,{useState,useEffect} from 'react'
 import Publication from '../../components/Publications'
 import { client } from '../../client'
 import {BiCaretDown} from 'react-icons/bi'
+import {FaMinus} from 'react-icons/fa'
 import Link from 'next/link'
 
 const List = () => {
     const [display, setDisplay]=useState(false)
-    const [publication,setPublications]=useState([]) 
+    const [publications,setPublications]=useState([])
+    const [Journalpublications,SetJournalPublicatiopns]=useState([]) 
+    const [conferencePublications,SetConferencePublications]=useState([])
+    
+
     const [filtered_publication, setFiltered_publication]=useState([])
     const year=[2022,2021,2020,2019,2018]
   
     useEffect(()=>{
-       const publications='*[_type=="Publications"]'
-       client.fetch(publications).then((data)=>{
+       const journal='*[_type=="Journalpublications"]'
+       const conference='*[_type=="ConferencePublications"]'
+       client.fetch(journal).then((data)=>{
         setPublications(data)
-        setFiltered_publication(data)
+        SetJournalPublicatiopns(data)
+       })
+       client.fetch(conference).then((data)=>{
+        setPublications(data)
+        SetConferencePublications(data)
        })
     },[])
      
@@ -57,7 +67,21 @@ const List = () => {
                </div>
             </div>
         </div>
-       <Publication data={filtered_publication}/> 
+        <div>
+        <div className='my-32'>
+
+<h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' />Peer-Reviewed Journal Publications
+</h2>    
+</div>
+          <Publication data={Journalpublications}/>
+        </div>
+        <div className='my-32'>
+
+<h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' />Conference Publications (Scopus indexed)
+
+</h2>    
+</div>
+       <Publication data={conferencePublications}/> 
        <p>Hello</p>
     </div>
   )

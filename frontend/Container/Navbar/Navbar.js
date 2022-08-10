@@ -10,7 +10,7 @@ import Link from 'next/link'
 const icons=[AiOutlineHome,HiNewspaper,RiAwardFill]
 const nav_List=["Home","WhatsNew", "Awards",]
 const Navbar = () => {
-const [display, setDisplay]=useState(true)
+const [display, setDisplay]=useState(false)
 const [show, setShow]=useContext(toggleContext)
   return (
     <>

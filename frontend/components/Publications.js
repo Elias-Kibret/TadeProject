@@ -80,7 +80,7 @@ const handleEvent=(abstract_title,abstract,link)=>{
 
                                   <div key={item+item} >
                                   {
-                                    item.Authors.map((item,index)=>{
+                                    item.Authors?.map((item,index)=>{
                                       return(
                       
                                         <span className='-mt-2 text-xs' key={index+item} >{index===0?<b className='mx-1'>{item}</b>:<i className='mx-1'>{item}</i>}</span>
