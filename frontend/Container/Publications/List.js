@@ -145,7 +145,8 @@ const List = () => {
             </div>
         </div>
         <div>
-    
+          <div className='lg:mx-24 md:mx-8 mx-4'>
+
 {
   displayJournal&&(
     <div>
@@ -174,10 +175,12 @@ const List = () => {
   </div>
    )
 }
+          </div>
        
        <p>Hello</p>
     </div>
   )
 }
+    
 
 export default List

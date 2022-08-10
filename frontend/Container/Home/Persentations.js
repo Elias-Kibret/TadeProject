@@ -15,7 +15,7 @@ const persentaions = () => {
      })
   },[])
   return (
-    <div className="md:px-24">
+    <div className="px-3 lg:px-24">
                <div>
                 <div className="flex mt-8  items-center justify-between">
                 <div>

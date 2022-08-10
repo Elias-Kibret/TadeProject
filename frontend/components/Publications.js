@@ -45,7 +45,7 @@ const handleEvent=(abstract_title,abstract,link)=>{
         }
       
       
-        <div className='px-4 mx-auto md:w-[95%] lg:w-[90%] grid  gap-x-10 ]'>
+        <div className='mx-auto w-full sm:w-[80%] md:w-[100%] lg:w-[90%] grid  gap-x-10 ]'>
               {
                 props?.data.map((item, index)=>{
                   return(
@@ -83,7 +83,7 @@ const handleEvent=(abstract_title,abstract,link)=>{
                                     item.Authors?.map((item,index)=>{
                                       return(
                       
-                                        <span className='-mt-2 text-xs' key={index+item} >{index===0?<b className='mx-1'>{item}</b>:<i className='mx-1'>{item}</i>}</span>
+                                        <span className='-mt-2 text-xs' key={index+item} >{item==='Wakjira T'?(<b className='mr-2'>{item}</b>):(<i className='mr-2'>{item}</i>)}</span>
                       
                                       )
                                     })
@@ -103,7 +103,7 @@ const handleEvent=(abstract_title,abstract,link)=>{
   
                         </div>
                         <div className='md:flex justify-between items-center'>
-                        <div className='mt-3 flex  flex-col md:flex-row'>
+                        <div className='mt-3 flex  flex-col sm:flex-row'>
                             {
                               links.map((link,index)=>{
                               
@@ -122,15 +122,15 @@ const handleEvent=(abstract_title,abstract,link)=>{
                               })
                             }
                           </div>
-                          <div className='md:w-[10%] object-cover mt-6 md:hidden'>
-                            <img src={urlFor(item.images.asset._ref)} width='' height='250px' className='object-cover'/>
+                          <div className=' object-cover mt-6 xs:hidden'>
+                            <img src={urlFor(item.images.asset._ref)} width='200px' height='200px' className='object-cover'/>
                           </div>
                         </div>
                         
       
   
                         </div>
-                        <div className=' object-cover mt-6 hidden md:block '>
+                        <div className=' object-cover mt-6 hidden xs:block '>
                             <img src={urlFor(item.images.asset._ref)} width='120px' height='250px' className='object-cover'/>
                           </div>
                         </div>
