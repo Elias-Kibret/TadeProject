@@ -66,19 +66,11 @@ const handleEvent=(abstract_title,abstract,link)=>{
                       </div>
                         <div className='flex justify-between mt-10'>
                         <div className=' text-sm flex text-gray-300 '>
-                          <ul className='list-none -my-2 text-sm font-semibold w-[100px] text-[#2ECC71]'>
-                            {
-                              list.map((list,index)=>(
-                                <li className='my-2 text-xs' key={list+index}>{list}</li>
-                              ))
-                            }
-      
-        
-                          </ul>
                           <ul className='list-none '>
                     
 
                                   <div key={item+item} >
+                                    <span className='text-[#2ECC71] font-semibold mr-2'>Authors</span>
                                   {
                                     item.Authors?.map((item,index)=>{
                                       return(
@@ -88,11 +80,7 @@ const handleEvent=(abstract_title,abstract,link)=>{
                                       )
                                     })
                                   }
-                                  <li className='my-3 text-xs'><i>{item.Journal}</i></li> 
-                                  {/* <li className='my-2'><i>{item.Vol}</i></li>
-                                  <li className='my-2'><i>{item.Pages}</i></li>
-                                  <li className='my-2'><i>{item.Year}</i></li>
-                                  <li className='my-2' ><i>{item.Citeas}</i></li> */}
+                                  <li className='my-3 text-xs'><span className='text-[#2ECC71] font-semibold mr-2'>Journal </span><i>{item.Journal}</i></li> 
                                   </div> 
                         
                     
