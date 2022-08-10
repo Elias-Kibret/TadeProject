@@ -13,10 +13,10 @@ const List = () => {
     const [filteredConfernce,setFilteredConference]=useState([])
     const [conference ,setConference]=useState([])
     const [Journal,setJournal]=useState([])
-    const [type, setType]=useState('')
+    const [type, setType]=useState('Type')
     
   
-    
+  
 
     const [filtered_publication, setFiltered_publication]=useState([])
     const year=[2022,2021,2020,2019,2018]
@@ -25,17 +25,15 @@ const List = () => {
        const journal='*[_type=="Journalpublications"]'
        const conference='*[_type=="ConferencePublications"]'
        client.fetch(journal).then((data)=>{
-        setJournal(data)
-        setFilteredJournal(data)
+        setJournal(data.sort((a,b)=>(a.Order>b.Order)?1:((b.Order>a.Order)?-1:0)))
+        setFilteredJournal(data.sort((a,b)=>(a.Order>b.Order)?1:((b.Order>a.Order)?-1:0)))
         
        })
        client.fetch(conference).then((data)=>{
-        setConference(data)
-        setFilteredConference(data)
+        setConference(data.sort((a,b)=>(a.Order>b.Order)?1:((b.Order>a.Order)?-1:0)))
+        setFilteredConference(data.sort((a,b)=>(a.Order>b.Order)?1:((b.Order>a.Order)?-1:0)))
      
        })
-    
-    
         
     },[])
      
@@ -95,13 +93,23 @@ const List = () => {
        
        }
    }
-  
+   console.log(type)
 
   return (
     <div>
         <div>
         <div className="flex md: my-16  w-full justify-center  items-center flex-col sm:flex-row">
-               <div><h3 className="text-[#FFFFFF] text-3xl  "><span className='text-[#2ecc71] font-semibold text-4xl '> {filteredConfernce.length+filteredJournal.length}</span> Publications </h3></div>
+               <div><h3 className="text-[#FFFFFF] text-3xl  "><span className='text-[#2ecc71] font-semibold text-4xl '> {
+
+                    (type==='Both' || type==='Type')&&(<span>{filteredConfernce.length+filteredJournal.length}</span>)
+                   
+
+
+               }{
+                (type==='Journal')&&(<span>{filteredJournal.length}</span>)
+               }
+               {(type==='Conference')&&(<span>{filteredConfernce.length}</span>)}
+               </span> Publications </h3></div>
                <div className="flex items-center flex-col md:flex-row justify-between   text-[#FFFFFF] sm:mx-14">
                 <div className="px-4 py-2 mr-6 font-semibold ">Filter by </div>
                 
