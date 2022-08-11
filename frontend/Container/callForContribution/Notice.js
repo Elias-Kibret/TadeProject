@@ -3,7 +3,7 @@ import React from 'react'
 const Notice = () => {
   return (
     <div className='text-[white] my-20'>
- <p className='font-light sm:w-[70%] mx-auto text-justify '>
+ <p className='font-light w-[90%] sm:w-[70%] mx-auto text-justify '>
  Soft computing methods are problem-solving strategies that have been
  used to obtain approximate solutions to complex problems. Biologically
  inspired methods such as Artificial Neural Networks, Evolutionary Algorithms,

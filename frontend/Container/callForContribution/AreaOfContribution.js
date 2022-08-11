@@ -23,13 +23,21 @@ const AreaOfContribution = () => {
     <div className='mt-14 overflow-hidden'>
 
 
-    <div className='sm:grid-cols-2  lg:grid-cols-3 place-items-center over gap-x-16 gap-y-10  overflow-hidden  grid grid-cols-1'>
+    <div className='flex flex-wrap justify-center'>
   
   {
     areaOfContribution.map((item,index)=>{
    
       return(
-        <div className=' bg-[#141B17]  overflow-hidden rounded-xl xs:w-[300px] md:w-[350px] h-[25.5rem]' key={item+index}>
+        <motion.div 
+        
+        initial={{opacity:0,scale:0.5}}
+        whileInView={{opacity:1,scale:1}}
+        transition={{
+          duration: 0.25,
+          delay: 0.5
+        }}
+        className=' bg-[#141B17] mx-5 mb-10 overflow-hidden rounded-xl xs:w-[300px] md:w-[330px] h-[25.5rem]' key={item+index}>
         <div className=''>
 
 
@@ -43,7 +51,7 @@ className="object-cover overflow-hidden md:w-[350px] h-[200px]"/>
 </div> 
 </div>
 
-        <div className='mx-4 px-10 lg:px-4 '>
+        <div className='mx-4 px-5 lg:px-4 '>
         <span className='block my-4 text-[#2ECC71]'>{item.Title}</span>
         <p className='mt-4  text-[#FFFFFF] leading-6 text-justify font-light text-sm'>
 
@@ -54,7 +62,7 @@ className="object-cover overflow-hidden md:w-[350px] h-[200px]"/>
 
 
 
-      </div>  
+      </motion.div>  
       )
     })
   }
