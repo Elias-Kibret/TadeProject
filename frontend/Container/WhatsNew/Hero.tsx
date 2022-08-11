@@ -1,4 +1,3 @@
-
 import Image from 'next/image'
 import HeroImage from '../../public/Img/HeroImages/whatsNewHero.png'
 import SocialMediaIcons from '../../components/Icons/SocialMediaIcons'
