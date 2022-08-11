@@ -23,7 +23,7 @@ const Cols = (props) => {
             props.data?.map((item,index)=>{
               
               return(
-                <div className=' bg-[#141B17] overflow-hidden rounded-xl mb-10 mx-5 xs:w-[300px] md:w-[350px] h-[31.5rem]' key={item+index}>
+                <div className=' bg-[#141B17] overflow-hidden rounded-xl mb-10 mx-5 xs:w-[300px]  sm:w-[380px] lg:w-[350px] h-[31.5rem]' key={item+index}>
                 <div className=''>
 
                
