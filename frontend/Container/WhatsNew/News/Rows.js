@@ -38,7 +38,7 @@ const Rows = (props) => {
              {
               item?.imagesGallery.map((images,index)=>{
                 return(
-                <div key={images.asset._ref} className='w-[100px] object-cover h-[200px]'>
+                <div key={images.asset._ref} className=' object-cover'>
                   <img 
                       src={urlFor(images.asset._ref)} width='450px' height='200px' 
                       className="object-cover overflow-hidden rounded-xl"/>

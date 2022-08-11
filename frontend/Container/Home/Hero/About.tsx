@@ -2,7 +2,7 @@ import {motion} from 'framer-motion'
 const About = () => {
   return (
     <>
-        <motion.p className='px-10 sm:p-0 text-sm sm:text-xl font-light my-5 text-justify text-gray-300 '
+        <motion.p className='px-10 sm:p-0 text-sm sm:text-xl font-light my-5  text-gray-300 '
            initial={{opacity:0.3}}
            animate={{opacity:1}}
            transition={{delay:1.5}}

@@ -7,11 +7,11 @@ import Socialmedia from "../../components/Icons/SocialMediaIcons"
 const Hero = () => {
   return (
 <main className="pb-16 w-full  "  >  
-<div className='flex px-4 sm:pl-24 justify-between  mt-16'>
+<div className='flex lg:ml-24  justify-between  mt-16'>
    {/* Desktop */}
    <div className="hidden lg:inline-flex">
 
-   <div className='  w-4/5'>
+   <div className='lg:w-[93%]'>
          <Title/>
          <About/>
          <div className="hidden lg:block">
@@ -30,19 +30,48 @@ const Hero = () => {
    </div>
  
 
+
+
+
+
+  
+
+
+  </div>
   {/* Tablate */}
+  <div className="hidden sm:block lg:hidden w-full">
+    <div className="flex flex-row  justify-between w-[100%]">
+      <div className="flex flex-col w-[30%] ml-10">
+        <Title/>
+      
+      </div>
+      <div className="w-[50%]">
+      <ImageHero/>
+      </div>
+      
+    </div>
+    <div className="flex flex-col ml-10">
+      <div className="flex justify-between items-center md:w-[80%] ">
+        <div className="w-[70%] md:w-[65%] ">
+        <About />
+        </div>
+      
+        <Button/>
+      </div>
 
-
-
+<div className="flex">
+<Marks/>
+  <Socialmedia/>
+</div>
+      
+    </div>
+    </div> 
   {/* Mobile */}
-
-
-  </div> 
   <div className="flex flex-col  sm:hidden">
   
 
   <div className="relative ">
-    <div className="absolute top-28">
+    <div className="absolute top-10">
     <Marks/>
     </div>
   
