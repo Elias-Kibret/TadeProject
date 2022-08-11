@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import { client,urlFor } from '../../client'
 import {FaMinus} from 'react-icons/fa'
+import {motion} from 'framer-motion'
 import Slider from 'react-slick'
 const List = () => {
     const settings = {
@@ -30,13 +31,15 @@ const [researchInterest,setResearchInterest]=useState([])
         <div className='mt-14'>
 
 
-        <div className='sm:grid-cols-2  lg:grid-cols-3 place-items-center over gap-x-16 gap-y-10  overflow-hidden  grid grid-cols-1'>
+        <div className='flex flex-wrap justify-center'>
       
       {
         researchInterest.map((item,index)=>{
        
           return(
-            <div className=' bg-[#141B17] hover-state overflow-hidden overflow-hidden rounded-xl xs:w-[300px] md:w-[350px] h-[25.5rem]' key={item+index}>
+            <motion.div
+            
+            className=' bg-[#141B17] hover-state overflow-hidden mx-4 mb-10 rounded-xl xs:w-[300px] md:w-[350px] h-[25.5rem]' key={item+index}>
             <div className=''>
 
 
@@ -56,7 +59,7 @@ return(
 </Slider>
 </div>
 
-            <div className='mx-4 px-10 lg:px-4 h-[11rem]'>
+            <div className='mx-4 px-2 lg:px-4 h-[11rem]'>
             <span className='block my-4 text-[#2ECC71]'>{item.Title}</span>
             <p className='mt-4  text-[#FFFFFF] leading-6 text-justify font-light text-sm'>
   
@@ -67,7 +70,7 @@ return(
 
 
 
-          </div>  
+          </motion.div>  
           )
         })
       }

@@ -4,7 +4,7 @@ import { client } from '../../client'
 import {BiCaretDown} from 'react-icons/bi'
 import {FaMinus} from 'react-icons/fa'
 import Link from 'next/link'
-
+import {motion} from 'framer-motion'
 const List = () => {
     const [display, setDisplay]=useState(false)
     const [displayJournal, setDisplayJournal]=useState([true])
@@ -142,42 +142,64 @@ const List = () => {
                 </div>
                 
                </div>
+
+
+
+
+               
             </div>
-        </div>
-        <div>
-          <div className='lg:mx-24 md:mx-8 mx-4'>
+            <div>
+                    <div className='lg:mx-24 md:mx-8 mx-4'>
 
-{
-  displayJournal&&(
-    <div>
-      <div className='my-28 mx-24'>
+          {
+            displayJournal&&(
+              <div>
+                <div className='my-28 lg:mx-24'>
 
-      <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' />Peer-Reviewed Journal Publications
-      </h2>    
-      </div>
-      <Publication data={filteredJournal}/>
-    </div>
-  )
-}
+                <motion.h2 
+                initial={{opacity:0,x:-1000}}
+                whileInView={{opacity:1,x:0}}
+                transition={{
+                  duration: 0.3,
+                  delay:0.3
+                      
+                }}
+                className="text-[#FFFFFF]  text-2xl md:text-3xl mt-8 w-[100%] font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' />Peer-Reviewed Journal Publications
+                </motion.h2>    
+                </div>
+                <Publication data={filteredJournal}/>
+              </div>
+            )
+          }
          
-        </div>
+                  </div>
       
-{
-  displayConfernace&&(
-  <div>
-    <div className='my-32 mx-24'>
+          {
+            displayConfernace&&(
+            <div>
+              <div className='my-32 lg:mx-24'>
 
-<h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' />Conference Publications (Scopus indexed)
+          <motion.h2 
+          initial={{opacity:0,x:-1000}}
+          whileInView={{opacity:1,x:0}}
+          transition={{
+            duration: 0.3,
+            delay:0.3
+                      
+          }}
+          className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' />Conference Publications (Scopus indexed)
 
-</h2>    
-</div>
-    <Publication data={filteredConfernce}/>
-  </div>
-   )
-}
+          </motion.h2>    
           </div>
+              <Publication data={filteredConfernce}/>
+            </div>
+             )
+          }
+                    </div>
+        </div>
+        
        
-       <p>Hello</p>
+      
     </div>
   )
 }

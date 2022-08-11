@@ -6,7 +6,7 @@ import Link from 'next/link'
 import image from '../public/Img/awards/Mask group.jpg'
 import Modal from '../components/Modal'
 import { IconContext } from 'react-icons'
-
+import {motion} from 'framer-motion'
 const Publications = (props) => {
 const [showModal,setShowModal]=useState(true)
 const [abstract, setAbstract]=useState('')
@@ -49,7 +49,19 @@ const handleEvent=(abstract_title,abstract,link)=>{
               {
                 props?.data.map((item, index)=>{
                   return(
-                    <div className='mt-12 md:mx-8'>
+                    <motion.div 
+                    initial={{opacity:0,scale:0.7}}
+                    whileInView={{opacity:1,scale:1}}
+                    transition={{
+                      duration: 0.3,
+                      
+                    }}
+                    whileHover={{
+                      scaleX:1.05,
+                      duration:0.1
+                      
+                    }}
+                    className='mt-12 md:mx-8  mx-4 xs:mx-6' >
 
 
 
@@ -122,7 +134,7 @@ const handleEvent=(abstract_title,abstract,link)=>{
                             <img src={urlFor(item.images.asset._ref)} width='120px' height='250px' className='object-cover'/>
                           </div>
                         </div>
-                        </div>
+                        </motion.div>
                   )
                 })
       
