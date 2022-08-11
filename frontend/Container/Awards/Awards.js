@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { useRouter } from 'next/router'
 import { client,urlFor } from '../../client';
 import Image from 'next/image'
+import  {motion} from 'framer-motion'
 import Link from 'next/link';
 const Awards = (props) => {
 
@@ -21,14 +22,21 @@ const Awards = (props) => {
       
 
   return (
-    <div className='xs:grid-cols-2 lg:grid-cols-3 place-items-center over gap-x-12 gap-y-10  overflow-hidden  grid grid-cols-1'>
+    <div className='flex flex-wrap justify-center'>
       
     {
       props.data?.map((item,index)=>{
       
         return(
-          <div className=' bg-[#141B17]  rounded-xl w-[350px]  overflow-hidden h-[37rem]' key={item+index}>
-            <div className=' h-[17rem] overflow-hiiden object-cover'>
+          <motion.div 
+          initial={{opacity:0,scale:0.5}}
+          whileInView={{opacity:1,scale:1}}
+          transition={{
+            duration: 0.25,
+            delay: 0.5
+          }}
+          className=' bg-[#141B17]  rounded-xl w-[300px] lg:w-[350px] mb-10 mx-6 overflow-hidden h-[34.4rem]' key={item+index}>
+            <div className=' h-[12rem] sm:h-[17rem] overflow-hiiden object-cover'>
               <Slider {...settings} className=" overflow-hidden object-cover">
               {
                   props.data[index].imagesGallery?.map((img,index)=>{
@@ -42,7 +50,7 @@ const Awards = (props) => {
                             
                              img.asset?._ref&&(<img 
                               src={urlFor(img.asset._ref).url()}  
-                              className="object-cover overflow-hidden "/>)
+                              className="object-cover overflow-hidden h-["/>)
                           }
                         
   
@@ -57,9 +65,9 @@ const Awards = (props) => {
 
             </div>
 
-          <div className='mt-4 md:mx-10 lg:mx-4  px-11 lg:px-4 h-[15rem]'>
+          <div className='mt-10 sm:mt-0 px-4 lg:px-10 h-[15rem]'>
           
-          <h2 className='text-xl text-gray-200 font-semibold h-[5rem]'>{item.Title}</h2>
+          <h2 className=' md:text-xl text-gray-200 font-semibold '>{item.Title}</h2>
           <p className='my-5 text-sm text-[#FFFFFF] leading-6 text-justify font-light h-[6.6rem]'>
               
      {item.decription.substring(0,150) }
@@ -75,7 +83,7 @@ const Awards = (props) => {
               </div>
             )
           }
-        </div>  
+        </motion.div>  
         )
       })
     }
