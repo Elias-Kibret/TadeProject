@@ -177,10 +177,7 @@ color: #f4fffdff;
         font-size: 50px;
     }
     .awards_hero{
-        padding: 0px 200px !important;
-        width:400px;
-        height:500px;
-        margin: 0px 100px 0px 150px;
+        
         background-image: url('../public/Img/HeroImages/awardHero.png');
         background-repeat: none;
         background-size:  cover;
@@ -188,6 +185,17 @@ color: #f4fffdff;
         background-color: rgba(0,0,0,0.4);
     }
 
+ }
+ @media(min-width:1024px){
+    .awards_hero{
+        width: 400px;
+        height: 500px;
+        background-image: url('../public/Img/HeroImages/awardHero.png');
+        background-repeat: none;
+        background-size:  cover;
+        background-position: center;
+        background-color: rgba(0,0,0,0.4);
+    } 
  }
 
 

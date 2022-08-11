@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import {urlFor,client} from '../../../client'
 import Slider from "react-slick"
-
+import {motion} from 'framer-motion'
 const Rows = (props) => {
         const settings = {
           dots: true,
@@ -22,12 +22,21 @@ const Rows = (props) => {
             props?.data.map((item,index)=>{
              
               return(
-                <div key={index} className=" my-10 lg:my-20 flex flex-row w-[100%]
+                <motion.div 
+                initial={{opacity:0,scale:0.5}}
+                whileInView={{opacity:1,scale:1}}
+                transition={{
+                  duration: 0.25,
+                  delay: 0.5
+                }}
+                key={index} className=" my-10 lg:my-20 flex flex-row w-[90%]
                  xs:w-[80%] sm:w-[60%] lg:w-[100%] md:w-[60%] mx-auto
                               flex-wrap-reverse justify-between
                               items-center
                                 bg-[#141B17] py-10
-                                 md:py-8 px-6 md:px-20   rounded-xl ">
+                                 md:py-8 px-6 md:px-20   rounded-xl 
+                                 
+                                 ">
                 <div className=' flex flex-col  w-[100%] lg:w-[50%] justify-center'>
                    <h3 className='p text-[#2ECC71] mb-4 '>{item.date}</h3>
                    {
@@ -54,7 +63,7 @@ const Rows = (props) => {
 </Slider>
       </div>
       
-      </div>
+      </motion.div>
               )
 
 

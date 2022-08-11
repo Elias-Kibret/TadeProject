@@ -35,7 +35,11 @@ const Awards = (props) => {
             duration: 0.25,
             delay: 0.5
           }}
-          className=' bg-[#141B17]  rounded-xl w-[300px] lg:w-[350px] mb-10 mx-6 overflow-hidden h-[34.4rem]' key={item+index}>
+          whileHover={{
+            
+            transition: { duration: 0.3},
+          }}
+          className=' bg-[#141B17]  rounded-xl w-[300px] lg:w-[350px] mb-10 mx-2 sm:mx-8 w  overflow-hidden   ' key={item+index}>
             <div className=' h-[12rem] sm:h-[17rem] overflow-hiiden object-cover'>
               <Slider {...settings} className=" overflow-hidden object-cover">
               {
@@ -65,7 +69,7 @@ const Awards = (props) => {
 
             </div>
 
-          <div className='mt-10 sm:mt-0 px-4 lg:px-10 h-[15rem]'>
+          <div className='mt-10 sm:mt-0 px-2 lg:px-6 h-[15rem]'>
           
           <h2 className=' md:text-xl text-gray-200 font-semibold '>{item.Title}</h2>
           <p className='my-5 text-sm text-[#FFFFFF] leading-6 text-justify font-light h-[6.6rem]'>

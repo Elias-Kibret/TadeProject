@@ -13,7 +13,7 @@ const List = () => {
      })
   },[])
   return (
-    <div className=' mx-6 lg:mx-24 mt-32  '>
+    <div className=' mx-6 lg:mx-12 mt-32  '>
   
   <Awards data={awards}/>
 

@@ -39,16 +39,20 @@ const Header = () => {
             </div>
               <div  className="bg-[#2ECC71] text-[#FFFFFF] hidden md:block hover-state text-sm border-black  px-7 py-2  rounded-full hover:bg-[black]  hover:text-[#2ECC71] hover: border hover:border-[#2ECC71] ">
               <button onClick={()=>{
-                setShowContactForm(!showContactForm)
+                      setShowContactForm(true)
 
-              }} >
+                    }} >
                     <a className="flex items-center"> Contact</a>
                 </button>
              
                 
               </div>
               {
-                showContactForm&&(<div className="absolute bg-[black] right-0  top-10 left-0  pt-10 pb-60 -mr-3 ">
+                showContactForm&&(<div className="absolute bg-[black] right-0 -top-4 left-0  pt-10 pb-60 -mx-10">
+                  <button className="text-[#2eec71] font-semibold absolute right-10 " onClick={()=>{
+                  setShowContactForm(!showContactForm)
+
+                }} ><HiOutlineX size={38}/></button>
                 <Contact/>
               </div>)
               }

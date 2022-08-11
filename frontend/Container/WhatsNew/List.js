@@ -15,7 +15,7 @@ const List = () => {
   },[])
 
   return (
-    <div className=" px-6 md:mt-20 md:px-20" >
+    <div className="  md:mt-20 md:px-20" >
       
      <RowUI data={news.filter((item,index)=>{return index===0||index%4==0})}/>
        <ColUI data={news.filter((item,index)=>{return index!=0||index%4!=0})} />
