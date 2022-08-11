@@ -38,7 +38,12 @@ const [researchInterest,setResearchInterest]=useState([])
        
           return(
             <motion.div
-            
+            initial={{opacity:0,scale:0.5}}
+            whileInView={{opacity:1,scale:1}}
+            transition={{
+              duration: 0.25,
+              delay: 0.5
+            }}
             className=' bg-[#141B17] hover-state overflow-hidden mx-4 mb-10 rounded-xl xs:w-[300px] md:w-[350px] h-[25.5rem]' key={item+index}>
             <div className=''>
 

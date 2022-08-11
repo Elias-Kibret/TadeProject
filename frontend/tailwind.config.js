@@ -13,6 +13,9 @@ module.exports = {
     './Container/Presentation/**/*.{js,ts,jsx,tsx}',
     './Container/ResearchInterset/**/*.{js,ts,jsx,tsx}',
     './Container/callForContribution/**/*.{js,ts,jsx,tsx}',
+    './Container/ResearchInterset/**/*.{js,ts,jsx,tsx}',
+
+    
     
     
   ],
