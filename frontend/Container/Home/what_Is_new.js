@@ -20,7 +20,7 @@ const what_Is_new = () => {
   },[])
   
  return (
-    <div className=" px-6 md:mt-20 md:px-20">
+    <div className=" px-6 md:mt-20 mdL md:px-28 lg:px-20">
         <h2 className="text-[#A9A9A9] text-xl flex items-center font-bold"><span className=" text-[#A9A9A9] px-2 "><FaMinus /></span> News</h2>
         <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-extrabold">What's New</h2>
         <div className='mt-10 md:mt-16'>

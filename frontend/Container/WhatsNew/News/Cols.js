@@ -17,13 +17,13 @@ const Cols = (props) => {
     cssEase: "linear", 
   }
   return (
-    <div className='sm:grid-cols-2  lg:grid-cols-3 place-items-center over gap-x-16 gap-y-10  overflow-hidden  grid grid-cols-1'>
+    <div className='flex flex-wrap justify-center'>
       
           {
             props.data?.map((item,index)=>{
               
               return(
-                <div className=' bg-[#141B17] overflow-hidden rounded-xl xs:w-[300px] md:w-[350px] h-[31.5rem]' key={item+index}>
+                <div className=' bg-[#141B17] overflow-hidden rounded-xl mb-10 mx-5 xs:w-[300px] md:w-[350px] h-[31.5rem]' key={item+index}>
                 <div className=''>
 
                
