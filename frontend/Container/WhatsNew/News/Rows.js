@@ -40,7 +40,7 @@ const Rows = (props) => {
                 <div className=' flex flex-col  w-[100%] lg:w-[50%] justify-center'>
                    <h3 className='p text-[#2ECC71] mb-4 '>{item.date}</h3>
                    {
-                    item.Title&&(<h3 className='p text-gray-300 text-2xl  mb-4'>{item.Title}</h3>)
+                    item.Title&&(<h3 className='p text-gray-300  text-xl md:text-2xl  mb-4'>{item.Title}</h3>)
                    }
                    
                    <p className="text-gray-300 leading-8 text-justify font-light text-sm">{item.decription}</p>

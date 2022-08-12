@@ -21,7 +21,7 @@ const List = () => {
   
 
   return (
-<div className="mt-8  items-center justify-between px-3">
+<div className="mt-12  items-center justify-between px-3">
    <div className='mt-10 '>
     <h3 className="text-[#FFFFFF] text-3xl  ">Selected Publications </h3>
    </div>
