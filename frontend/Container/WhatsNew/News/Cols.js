@@ -7,7 +7,7 @@ import Button from '../../Home/Hero/Button'
 import {motion} from 'framer-motion'
 const Cols = (props) => {
   const router = useRouter()
-  console.log(router.pathname)
+  
   const settings = {
     dots: true,
     infinite: true,
