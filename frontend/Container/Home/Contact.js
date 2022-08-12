@@ -2,9 +2,8 @@ import { useContext } from 'react';
 import {FaMinus} from 'react-icons/fa'
 import React from 'react'
 import {useForm,SubmitHandler} from 'react-hook-form'
-
-
 const Contact = () => {
+
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit =(data) => {
   
@@ -17,16 +16,17 @@ const Contact = () => {
     }).catch((err)=>{
       console.log(err)
     })
+    window.location.reload(true)
   }
   return (
     <div className="px-6 mx-auto md:px-24 over" >
         <div>
         <h2 className="text-[#A9A9A9] text-xl flex items-center font-bold"><span className=" text-[#A9A9A9] px-2 "><FaMinus /></span> Contact</h2>
-            <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold">Contact Me</h2>    
+            <h2 className="text-[#FFFFFF] text-2xl  mx-4 md:text-3xl mt-8  font-[poppins] font-bold">Contact Me</h2>    
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           
-        <div className="flex flex-col sm:grid sm:grid-cols-2 gap-x-20 px:5 sm:px-14 mx-auto mt-12">
+        <div className="flex flex-col sm:grid sm:grid-cols-2 gap-x-20 px-3 sm:px-14 mx-auto mt-12">
             <div className="flex flex-col">
             <input 
             {...register("name",{required:true})}

@@ -15,9 +15,9 @@ const Awards = () => {
   return (
     <div className='px-4  '>
         <div
-         className='mx-24'>
+         className='mx-4 md:mx-24'>
         <h2 className="text-[#A9A9A9] text-xl flex items-center font-bold"><span className=" text-[#A9A9A9] px-2 "><FaMinus /></span> Awards</h2>
-            <h2 className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold">Selected Awards and Recognitions</h2>    
+            <h2 className="text-[#FFFFFF] text-2xl  mx-4 md:text-3xl mt-8  font-[poppins] font-bold">Selected Awards and Recognitions</h2>    
         </div> 
         <div className='mt-20'>
           <Award data={awards}/>

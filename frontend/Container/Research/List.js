@@ -18,8 +18,8 @@ const List = () => {
       setSelectedPresentations(data)
      })
   },[])
-  // console.log(  selectedPublication)
-  console.log(selectedPresentations)
+  
+
   return (
 <div className="mt-8  items-center justify-between px-3">
    <div className='mt-10 '>

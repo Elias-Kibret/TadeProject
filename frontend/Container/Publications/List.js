@@ -14,6 +14,7 @@ const List = () => {
     const [conference ,setConference]=useState([])
     const [Journal,setJournal]=useState([])
     const [type, setType]=useState('Type')
+    const [Year,setYear]=useState(0)
     
   
   
@@ -38,7 +39,7 @@ const List = () => {
     },[])
      
    const filter=(year)=>{
-       
+       setYear(year)
         setFilteredJournal(Journal.filter((item,index)=>{
           if(year=="All"){
             return Journal
@@ -168,6 +169,7 @@ const List = () => {
                 </motion.h2>    
                 </div>
                 <Publication data={filteredJournal}/>
+                {filteredJournal.length===0&&(<p className='text-[red] text-center font-semibold text-2xl'>Sorry There is no Journal publication in {Year}</p>)}
               </div>
             )
           }
@@ -192,6 +194,7 @@ const List = () => {
           </motion.h2>    
           </div>
               <Publication data={filteredConfernce}/>
+              {filteredConfernce.length===0&&(<p className='text-[red] text-center font-semibold text-2xl'>Sorry There is no conference publication in {Year}</p>)}
             </div>
              )
           }
