@@ -24,9 +24,9 @@ const [show, setShow]=useContext(toggleContext)
                         <button key={item+index} className="flex items-center flex-col md:flex-row cursor-pointer relative " onClick={()=>{setShow(!show)}}  >
 
                         <Link href={`${item==='Home'?'/':item.trim().toLowerCase()}`} className="cursor-pointer ">
-                            <span className='px-4 flex items-center hover-state'>
+                            <span className='px-4 lg:px-6 flex items-center hover-state'>
                             <Icon/>
-                            <a className="px-1 cursor-pointer hover:text-[#2cce71]">
+                            <a className="px-1 lg:px-2 cursor-pointer hover:text-[#2cce71]">
                                       { item==='WhatsNew'?"What's New":item}</a>
                                       
 
