@@ -43,7 +43,7 @@ const [show, setShow]=useContext(toggleContext)
         
         setDisplay(true)}}
       onMouseLeave={()=>{
-        setTimeout(()=>{setDisplay(false)},3000)
+      setDisplay(false)
       }}
       >
         {
@@ -51,7 +51,7 @@ const [show, setShow]=useContext(toggleContext)
             <div className='research w-[200px] pb-6 bg-[#2cce71]  flex flex-col'
             onMouseEnter={()=>{setDisplay(true)}}
             onMouseLeave={()=>{
-              setTimeout(()=>{setDisplay(false)},2000)
+            setDisplay(false)
             }}
             >
             <Link href="/researchInterest" ><span className='link hover:text-'onClick={()=>{setShow(!show)}}>Research Interest</span></Link>

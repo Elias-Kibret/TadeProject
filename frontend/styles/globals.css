@@ -81,9 +81,11 @@ color: #f4fffdff;
 }
 .research{
     position: absolute;
-    top:1.6rem;
+    top:1rem;
+    border-top: 1.2rem solid black;
     left:2rem;
-    padding-left: 36px;
+    padding-top: 3px;
+padding:  10px 16px;
     color:black;
     font-weight:bold;
     text-align: left;
