@@ -23,7 +23,7 @@ const [show, setShow]=useContext(toggleContext)
                   const Icon=icons[index]
 
                     return (
-                        <button key={item+index} className="flex items-center flex-col md:flex-row cursor-pointer relative " onClick={()=>{setShow(!show)}}  >
+                        <button key={item+index} className="flex items-center py-2 flex-col md:flex-row cursor-pointer relative " onClick={()=>{setShow(!show)}}  >
 
                         <Link href={`${item==='Home'?'/':item.trim().toLowerCase()}`} className="cursor-pointer ">
                             <span className='px-4 lg:px-6 flex items-center hover-state'>
@@ -63,8 +63,8 @@ const [show, setShow]=useContext(toggleContext)
           )
         }
       
-<Link href="/research" className="cursor-pointer ">
-    <span className='px-6 flex items-center hover-state'>
+<Link href="/research" className="cursor-pointer py-2">
+    <span className='px-4 py-2  flex items-center hover-state'>
      <HiOutlineDocumentReport/>
     <a className="px-2 cursor-pointer hover:text-[#2cce71]">
 
