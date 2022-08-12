@@ -7,6 +7,7 @@ import {IoIosArrowDroprightCircle} from 'react-icons/io'
 import {BiCaretDown} from 'react-icons/bi'
 import Link from 'next/link'
 
+
 const icons=[AiOutlineHome,HiNewspaper,RiAwardFill,RiAwardFill]
 const nav_List=["Home","About","WhatsNew", "Awards",]
 const Navbar = () => {
@@ -42,16 +43,18 @@ const [show, setShow]=useContext(toggleContext)
         
         setDisplay(true)}}
       onMouseLeave={()=>{
-        setDisplay(false)
+        setTimeout(()=>{setDisplay(false)},3000)
       }}
       >
         {
           display&&(
             <div className='research w-[200px] pb-6 bg-[#2cce71]  flex flex-col'
             onMouseEnter={()=>{setDisplay(true)}}
-            onMouseLeave={()=>{setDisplay(false)}}
+            onMouseLeave={()=>{
+              setTimeout(()=>{setDisplay(false)},2000)
+            }}
             >
-            <Link href="/researchInterest" ><span className='link hover:text-[#2cce71]'onClick={()=>{setShow(!show)}}>Research Interest</span></Link>
+            <Link href="/researchInterest" ><span className='link hover:text-'onClick={()=>{setShow(!show)}}>Research Interest</span></Link>
             <Link href="/publications" ><span className='link hover:text-[#2cce71]'onClick={()=>{setShow(!show)}}>Publications</span></Link>
             <Link href="/presentation"><a className='link hover:text-[#2cce71]' onClick={()=>{setShow(!show)}}>Selected Presentation</a></Link>
             <Link href="/collaboration"><a className='link hover:text-[#2cce71]' onClick={()=>{setShow(!show)}}>Call for Collabuation</a></Link>
