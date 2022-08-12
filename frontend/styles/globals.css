@@ -32,6 +32,9 @@ background: linear-gradient(90deg, rgba(60, 55, 112, 0.6) 0%, rgba(27, 27, 114, 
 .hover-state{
     @apply hover:shadow-inner transform hover:scale-110 hover:bg-opacity-50 transition ease-out duration-300;
 }
+.dropDown{
+    @apply link px-3 py-1 hover:text-[white] hover:bg-[black] rounded-lg
+}
 
 .awards{
     

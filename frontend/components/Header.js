@@ -18,7 +18,7 @@ const Header = () => {
   const [showContactForm ,setShowContactForm]=useState(false)
   return (
     <toggleContext.Provider value={[show,setShow]}>
-      <header className=" bg-[black] fixed w-full top-0 left-0  right-0 z-10 text-xl px-4 sm:px-10  py-3 sm:py-5 text-gray- font-poppins ">
+      <header className=" bg-[black] fixed w-full top-0 left-0  right-0 z-10 text-xl px-2 sm:px-6  py-3 sm:py-5 text-gray- font-poppins ">
          <div className="flex  justify-between  xl:pl-14  items-center relative">
             <div className="flex justify-between items-center  space-x-4 w-full lg:w-auto sm:px-0 md:hidden lg:block">
   

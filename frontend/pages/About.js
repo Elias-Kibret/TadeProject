@@ -4,7 +4,7 @@ import about from '../public/Img/About.png'
 import {FaMinus} from 'react-icons/fa'
 const About = () => {
   return (
-    <div className='grid mx-24 grid-cols-2 h-[600px] text-white mt-20 font-light text-lg text-justify '>
+    <div className='flex flex-wrap'>
 
       <div className='mt-28'>
         {/* About  */}

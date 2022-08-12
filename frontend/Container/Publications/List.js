@@ -98,7 +98,7 @@ const List = () => {
   return (
     <div>
         <div>
-        <div className="flex md: my-16  w-full justify-center  items-center flex-col sm:flex-row">
+        <div className="flex md:mx-10 my-16  w-full justify-center  items-center flex-col sm:flex-row">
                <div><h3 className="text-[#FFFFFF] text-3xl  "><span className='text-[#2ecc71] font-semibold text-4xl '> {
 
                     (type==='Both' || type==='Type')&&(<span>{filteredConfernce.length+filteredJournal.length}</span>)
@@ -110,7 +110,7 @@ const List = () => {
                }
                {(type==='Conference')&&(<span>{filteredConfernce.length}</span>)}
                </span> Publications </h3></div>
-               <div className="flex items-center flex-col md:flex-row justify-between   text-[#FFFFFF] sm:mx-14">
+               <div className="flex items-center flex-col lg:flex-row justify-between   text-[#FFFFFF] sm:mx-14">
                 <div className="px-4 py-2 mr-6 font-semibold ">Filter by </div>
                 
                 <div className='flex justify-between'>

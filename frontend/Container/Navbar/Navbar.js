@@ -4,11 +4,12 @@ import {AiOutlineHome} from 'react-icons/ai'
 import {RiAwardFill} from 'react-icons/ri'
 import {HiOutlineDocumentReport,HiNewspaper} from 'react-icons/hi'
 import {IoIosArrowDroprightCircle} from 'react-icons/io'
+import {BsPersonCircle} from 'react-icons/bs'
 import {BiCaretDown} from 'react-icons/bi'
 import Link from 'next/link'
 
 
-const icons=[AiOutlineHome,HiNewspaper,RiAwardFill,RiAwardFill]
+const icons=[AiOutlineHome,BsPersonCircle,HiNewspaper,RiAwardFill]
 const nav_List=["Home","About","WhatsNew", "Awards",]
 const Navbar = () => {
 const [display, setDisplay]=useState(false)
@@ -54,10 +55,10 @@ const [show, setShow]=useContext(toggleContext)
             setDisplay(false)
             }}
             >
-            <Link href="/researchInterest" ><span className='link hover:text-'onClick={()=>{setShow(!show)}}>Research Interest</span></Link>
-            <Link href="/publications" ><span className='link hover:text-[#2cce71]'onClick={()=>{setShow(!show)}}>Publications</span></Link>
-            <Link href="/presentation"><a className='link hover:text-[#2cce71]' onClick={()=>{setShow(!show)}}>Selected Presentation</a></Link>
-            <Link href="/collaboration"><a className='link hover:text-[#2cce71]' onClick={()=>{setShow(!show)}}>Call for Collabuation</a></Link>
+            <Link href="/researchInterest" ><span className='dropDown'onClick={()=>{setShow(!show)}}>Research Interest</span></Link>
+            <Link href="/publications" ><span className='dropDown'onClick={()=>{setShow(!show)}}>Publications</span></Link>
+            <Link href="/presentation"><a className='dropDown' onClick={()=>{setShow(!show)}}>Selected Presentation</a></Link>
+            <Link href="/collaboration"><a className='dropDown' onClick={()=>{setShow(!show)}}>Call for Collabuation</a></Link>
         </div> 
           )
         }

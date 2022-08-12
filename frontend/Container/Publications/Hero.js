@@ -4,7 +4,7 @@ import SocialMediaIcons from '../../components/Icons/SocialMediaIcons'
 const Hero = () => {
   return (
 <main className="bg-[#000000]  mt-16 "  >
-<div className='flex flex-col lg:w-[80%] mx-auto lg:flex-row '>
+<div className='flex flex-col justify-center items-center lg:w-[80%] mx-auto md:flex-row '>
 
 <div className='awards_hero px-32 flex justify-center items-center ' >
          
