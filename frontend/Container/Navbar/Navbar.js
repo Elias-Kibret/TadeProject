@@ -16,7 +16,7 @@ const [display, setDisplay]=useState(false)
 const [show, setShow]=useContext(toggleContext)
   return (
     <>
-    <div className=" pt-4 pb-20 md:pt-0 md:pb-0 flex flex-col bg-[#000000] w-full  md:flex-row md:items-center items-start  text-sm text-gray-100 ">
+    <div className=" pt-4 pb-20 md:pt-0 md:pb-0 flex flex-col bg-[#000000] w-full h-[100vh] md:h-[8vh] md:flex-row md:items-center items-start  text-sm text-gray-100 ">
             {
                 nav_List.map((item,index)=>
                 {

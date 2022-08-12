@@ -17,14 +17,14 @@ const SocialMediaIcons = () => {
   return (
     <>
     <div className='mt-6 '>
-    <div className='  w-[160px] sm:w-[200px]  flex items-center text-white justify-between'>
+    <div className='  w-[170px] sm:w-[200px]  flex items-center text-white justify-between'>
         {
           icons.map((item,index)=>{
             
               return(
                   <Link className='' href={link[index]}>
-                    <a >
-                    <Image src={item} className=" hover-state object-contain rounded-full px-10" width={32} height={32}/>
+                    <a className='' >
+                    <Image src={item} className=" hover-state object-contain rounded-full " width={32} height={32}/>
                     </a>
                       
                       </Link>
