@@ -98,7 +98,11 @@ padding:  10px 16px;
     background-repeat: none;
     background-size: cover;
     overflow: hidden;
-    background-position:center;
+    width:500px;
+    height: 500px;
+    margin-top: 3rem; 
+       padding-top: 1rem;;
+    background-position:top;
 }
 .years{
     position: absolute;
