@@ -157,16 +157,10 @@ const List = () => {
               <div>
                 <div className='my-28 lg:mx-24'>
 
-                <motion.h2 
-                initial={{opacity:0,x:-1000}}
-                whileInView={{opacity:1,x:0}}
-                transition={{
-                  duration: 0.3,
-                  delay:0.3
-                      
-                }}
+                <h2 
+                
                 className="text-[#FFFFFF]  text-2xl md:text-3xl mt-8 w-[100%] font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' />Peer-Reviewed Journal Publications
-                </motion.h2>    
+                </h2>    
                 </div>
                 <Publication data={filteredJournal}/>
                 {filteredJournal.length===0&&(<p className='text-[red] text-center font-semibold text-2xl'>Sorry There is no Journal publication in {Year}</p>)}
@@ -181,17 +175,11 @@ const List = () => {
             <div>
               <div className='my-32 lg:mx-24'>
 
-          <motion.h2 
-          initial={{opacity:0,x:-1000}}
-          whileInView={{opacity:1,x:0}}
-          transition={{
-            duration: 0.3,
-            delay:0.3
-                      
-          }}
-          className="text-[#FFFFFF] text-3xl mt-8  font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' />Conference Publications (Scopus indexed)
+          <h2 
+        
+          className="text-[#FFFFFF] text-xl ml-3 md:text-3xl mt-8  font-[poppins] font-bold flex items-center"><FaMinus className='mr-3' />Conference Publications (Scopus indexed)
 
-          </motion.h2>    
+          </h2>    
           </div>
               <Publication data={filteredConfernce}/>
               {filteredConfernce.length===0&&(<p className='text-[red] text-center font-semibold text-2xl'>Sorry There is no conference publication in {Year}</p>)}

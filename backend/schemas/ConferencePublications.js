@@ -68,6 +68,11 @@ export default{
             name:'Order',
             title:'Order',
             type:'number'
+        },
+        {
+            name:'Type',
+            title:'Type',
+            type:'string'
         }
         
 

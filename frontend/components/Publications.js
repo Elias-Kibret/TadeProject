@@ -48,6 +48,7 @@ const handleEvent=(abstract_title,abstract,link)=>{
         <div className='mx-auto w-full sm:w-[80%] md:w-[100%] lg:w-[90%] grid  gap-x-10 ]'>
               {
                 props?.data.map((item, index)=>{
+                  console.log(item.Type)
                   return(
                     <motion.div 
                     initial={{opacity:0,scale:0.7}}
@@ -92,7 +93,7 @@ const handleEvent=(abstract_title,abstract,link)=>{
                                       )
                                     })
                                   }
-                                  <li className='my-3 text-xs'><span className='text-[#2ECC71] font-semibold mr-2'>Journal </span><i>{item.Journal}</i></li> 
+                                  <li className='my-3 text-xs'><span className='text-[#2ECC71] font-semibold mr-2 capitalize'>{item.Type} </span><i>{item.Journal}</i></li> 
                                   </div> 
                         
                     
