@@ -51,7 +51,7 @@ const [showContactForm ,setShowContactForm]=useState(false)
       >
         {
           display&&(
-            <div className='research w-[200px] pb-6 bg-[#2cce71]  flex flex-col '
+            <div className='research w-[200px] ml-10 mt-10 md:mt-0 md:ml-0 pb-6 bg-[#2cce71]  flex flex-col '
             onMouseEnter={()=>{setDisplay(true)}}
             onMouseLeave={()=>{
             setDisplay(false)
@@ -64,38 +64,43 @@ const [showContactForm ,setShowContactForm]=useState(false)
         </div> 
           )
         }
+        <div >
 
+    <div  className=" text-[#FFFFFF] block md:hidden hover-state text-sm border-black  px-4 py-2  rounded-full     " onClick={()=>{setShow(!show)}}>
+    <Link href="/Contact">
+          <span className='lg:px-6 flex items-center hover-state'>
+          <RiContactsLine />
+          <a className="px-1 lg:px-2 cursor-pointer hover:text-[#2cce71]">Contact
+                    </a>
+                                      
 
-     <Link href="/research" className="cursor-pointer py-2">
-            <span className='px-4 py-2  flex items-center hover-state'>
-             <HiOutlineDocumentReport/>
-            <a className="px-2 cursor-pointer hover:text-[#2cce71]">
+          </span>
+          
+      </Link>
+             
+                
+    </div>
+<div>
+<Link href="/research" className="cursor-pointer py-2">
+      <span className='px-4 py-2  flex items-center hover-state'>
+       <HiOutlineDocumentReport/>
+      <a className="px-2 cursor-pointer hover:text-[#2cce71]">
 
-              Research
-                      </a>
-                    <BiCaretDown/>                
+        Research
+                </a>
+              <BiCaretDown/>                
 
-            </span>
-        </Link>
+      </span>
+  </Link>
+</div>
+        </div>
+     
     
 
 </div> 
 <div className='z-[1]'>
 
-<div  className=" text-[#FFFFFF] block md:hidden hover-state text-sm border-black  px-7 py-2  rounded-full hover:bg-[black]   hover: border  " onClick={()=>{setShow(!show)}}>
-      <Link href="/Contact">
-            <span className='px-4 lg:px-6 flex items-center hover-state'>
-            <RiContactsLine />
-            <a className="px-1 lg:px-2 cursor-pointer hover:text-[#2cce71]">Contact
-                      </a>
-                                      
 
-            </span>
-          
-        </Link>
-             
-                
-      </div>
       {/* {
         showContactForm&&(<div className="absolute flex-1  bg-[black]  overflow-hidden md:hidden right-0 -top-4 left-0  pt-10 pb-60 -mx-10 text-gray-100 z-[30]">
           <button className="text-[#2eec71] font-semibold absolute right-10 " onClick={()=>{
