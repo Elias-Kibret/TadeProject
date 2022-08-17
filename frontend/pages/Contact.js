@@ -1,9 +1,21 @@
-import { useContext } from 'react';
+import { useContext,useState } from 'react';
 import {FaMinus} from 'react-icons/fa'
 import React from 'react'
 import {useForm,SubmitHandler} from 'react-hook-form'
-const Contact = () => {
+import { useRouter } from 'next/router'
 
+import {NotificationContainer, NotificationManager} from 'react-notifications';
+const Contact = () => {
+    const createNotification=(type)=>{
+        return ()=>{
+            switch(type){
+                case'success':
+                  NotificationManager.success('Success message', 'Title here');
+                  break;
+            }
+        }
+    }
+    const router = useRouter()
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit =(data) => {
   
@@ -16,7 +28,8 @@ const Contact = () => {
     }).catch((err)=>{
       console.log(err)
     })
-    window.location.reload(true)
+     setShow(!show)
+     router.back()
   }
   return (
     <div className="mx-auto md:px-18 lg:px-24 mt-32" >
@@ -65,6 +78,8 @@ const Contact = () => {
               
           </div>
         </form>
+
+        <NotificationContainer/>
     </div>
   )
 }
