@@ -151,7 +151,7 @@ padding:  10px 16px;
 @media (max-width:767px) {
 .mobile_nav{
     position:absolute;
-    width: 639px;
+    width: 767px;
     top:2.5rem;
     left:0;
     right:0;
