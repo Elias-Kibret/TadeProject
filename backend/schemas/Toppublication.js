@@ -57,6 +57,11 @@ export default{
             of:[{
                 type:'string'
             }]
+        },
+        {
+            name:'Type',
+            title:'Type',
+            type:'string'
         }
 
 

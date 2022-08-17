@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import Notification from '../components/Notification';
 import {motion} from 'framer-motion'
 const Contact = () => {
-const [show,setShow]=useState(true)    
+const [show,setShow]=useState(false)    
 const router = useRouter()
 const NotificationRef = useRef(null);
 const { register, handleSubmit, watch, formState: { errors } } = useForm();

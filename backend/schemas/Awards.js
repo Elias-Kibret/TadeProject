@@ -29,11 +29,22 @@ export default{
             type:'string'
         },
         {
-            name:'link',
+            name:'Link',
             title:'Link',
-            type:'string'
-        }
-
+            type:'array',
+            of:[{
+                type:'string'
+            }]
+        },
+        {
+            name:'LinkTitle',
+            title:'LinkTitle',
+            type:'array',
+            of:[{
+                type:'string'
+            }]
+        },
+       
 
 
 
