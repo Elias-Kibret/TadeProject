@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import {urlFor,client} from '../../client'
 import Slider from "react-slick"
 import { useRouter } from 'next/router'
-
+import {HiOutlineX} from 'react-icons/hi'
 const Details = (props) => {
 
     const [news,setNew]=useState([]) 
@@ -35,7 +35,10 @@ console.table(news)
 
 
   return (
-    <div className=''>
+    <div className='relative mt-40'>
+     <button className='absolute right-6 md:right-20 -top-20 text-[#2cce71]' onClick={() => router.back()}>
+      <HiOutlineX  size={36}/>
+    </button>
     {
       news.map((item,index)=>{
      

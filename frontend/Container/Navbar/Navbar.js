@@ -82,7 +82,7 @@ const [showContactForm ,setShowContactForm]=useState(false)
 </div> 
 <div className='z-[1]'>
 
-<div  className=" text-[#FFFFFF] block md:hidden hover-state text-sm border-black  px-7 py-2  rounded-full hover:bg-[black]   hover: border  ">
+<div  className=" text-[#FFFFFF] block md:hidden hover-state text-sm border-black  px-7 py-2  rounded-full hover:bg-[black]   hover: border  " onClick={()=>{setShow(!show)}}>
       <Link href="/Contact">
             <span className='px-4 lg:px-6 flex items-center hover-state'>
             <RiContactsLine />
